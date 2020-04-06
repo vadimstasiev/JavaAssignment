@@ -8,14 +8,10 @@
 |   Weighting of Assessment	|   70%	|
 |   Assessment type 	|   Code and Report // Presentation    |
     “Submit a word-processed report detailing the work that you have done. // Submit an individual video presentation about your work.”
-## Tasks
-
-1. Develop an appropriate part of the Student Event Management System (see Task Description). 
-
-2. Code and test the critical features your application using programming facilities of Java language such as, e.g., GUIs, I/O file operations, Networking classes, JDBC etc. In case your task involves a database, please carefully design your database using your database design and SQL skills.
 
 ## Deliverables 
-1. Project Report (max 9000 words or 2 pages), 20% of grade Illustrate and justify your choices in analysis and implementation. ***Provide evidence that you actually tested your code.*** Any code may go into the appendix, except core classes that you may explain in the main text. 
+1. Project Report (max 9000 words or 2 pages), 20% of grade.
+    - Illustrate and justify your choices in analysis and implementation. ***Provide evidence that you actually tested your code.*** Any code may go into the appendix, except core classes that you may explain in the main text. 
     - This is a formal report and attention should be given to the format of this work. You should include a title page, table of contents, heading and sub-headings (introduction, main part, summary, appendices), and captions for figures.
     - You are strongly advised to use the report template provided. 
 
