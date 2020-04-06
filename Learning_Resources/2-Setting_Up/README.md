@@ -1,5 +1,5 @@
 ﻿## Attention
-Before anything else, I would just like to ask you all not to use the git extension in VSCode, that can really mess up this project if you don't know what you are doing there. Please read the [GitHub Readme](../1-GitHub/README.md), thank you.
+Before anything else, I would just like to ask you all not to use the git extension in VSCode, that can really mess up this project if you don't know what you are doing there. Please make sure that you have read the [GitHub Readme](../1-GitHub/README.md), thank you.
 # Getting Started
 ## Installation Requirements
 To get started you need to install the following:
