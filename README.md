@@ -25,6 +25,421 @@
 - Reflect upon your strength and weaknesses in relation to a programming project you have undertaken and use these to improve your program code 3
 - Outline a test routine to check the logical correctness of a program you have written and provide the results of your testing demonstrating a working piece of code
 
+<br>
+<br>
+
+Functional Requirements
+
+EEMS = Extra-Curricular Events Management System
+
+<table>
+<tbody>
+<tr>
+<td width="104">
+<p>Req. No</p>
+</td>
+<td width="340">
+<p>Requirement</p>
+</td>
+<td width="157">
+<p>Priority*</p>
+</td>
+</tr>
+<tr>
+<td width="104">
+<p>1</p>
+</td>
+<td width="340">
+<p>As student must be able to register on the EEMS</p>
+</td>
+<td width="157">
+<p>MUST</p>
+</td>
+</tr>
+<tr>
+<td width="104">
+<p>2</p>
+</td>
+<td width="340">
+<p>A student must be able to log in to the EEMS</p>
+</td>
+<td width="157">
+<p>MUST</p>
+</td>
+</tr>
+<tr>
+<td width="104">
+<p>3</p>
+</td>
+<td width="340">
+<p>A student must be able to log out of the EEMS</p>
+</td>
+<td width="157">
+<p>COULD</p>
+</td>
+</tr>
+<tr>
+<td width="104">
+<p>4</p>
+</td>
+<td width="340">
+<p>An administrator must be able log in to the EEMS</p>
+</td>
+<td width="157">
+<p>SHOULD</p>
+</td>
+</tr>
+<tr>
+<td width="104">
+<p>5</p>
+</td>
+<td width="340">
+<p>An administrator must be able to log out of the EEMS</p>
+</td>
+<td width="157">
+<p>COULD</p>
+</td>
+</tr>
+<tr>
+<td width="104">
+<p>6</p>
+</td>
+<td width="340">
+<p>An administrator must be able to grant Organiser rights to a student</p>
+</td>
+<td width="157">
+<p>SHOULD</p>
+</td>
+</tr>
+<tr>
+<td width="104">
+<p>7</p>
+</td>
+<td width="340">
+<p>An administrator must be able to revoke Organiser rights from a student</p>
+</td>
+<td width="157">
+<p>SHOULD</p>
+</td>
+</tr>
+<tr>
+<td width="104">
+<p>8</p>
+</td>
+<td width="340">
+<p>A student must be able to search events</p>
+</td>
+<td width="157">
+<p>SHOULD</p>
+</td>
+</tr>
+<tr>
+<td width="104">
+<p>9</p>
+</td>
+<td width="340">
+<p>A student must be able to view all events</p>
+</td>
+<td width="157">
+<p>MUST</p>
+</td>
+</tr>
+<tr>
+<td width="104">
+<p>10</p>
+</td>
+<td width="340">
+<p>A student must be able to book an event</p>
+</td>
+<td width="157">
+<p>MUST</p>
+</td>
+</tr>
+<tr>
+<td width="104">
+<p>11</p>
+</td>
+<td width="340">
+<p>A student must be able to view his/her bookings</p>
+</td>
+<td width="157">
+<p>MUST</p>
+</td>
+</tr>
+<tr>
+<td width="104">
+<p>12</p>
+</td>
+<td width="340">
+<p>A student must be able to cancel a booking</p>
+</td>
+<td width="157">
+<p>MUST</p>
+</td>
+</tr>
+<tr>
+<td width="104">
+<p>13</p>
+</td>
+<td width="340">
+<p>An organiser must be able to post an event</p>
+</td>
+<td width="157">
+<p>MUST</p>
+</td>
+</tr>
+<tr>
+<td width="104">
+<p>14</p>
+</td>
+<td width="340">
+<p>An organiser must be able to view all his/her events</p>
+</td>
+<td width="157">
+<p>SHOULD</p>
+</td>
+</tr>
+<tr>
+<td width="104">
+<p>15</p>
+</td>
+<td width="340">
+<p>An organiser must be able to edit an event</p>
+</td>
+<td width="157">
+<p>SHOULD</p>
+</td>
+</tr>
+<tr>
+<td width="104">
+<p>16</p>
+</td>
+<td width="340">
+<p>An organiser must be able to cancel an event</p>
+</td>
+<td width="157">
+<p>SHOULD</p>
+</td>
+</tr>
+<tr>
+<td width="104">
+<p>17</p>
+</td>
+<td width="340">
+<p>An administrator must be able to view all events</p>
+</td>
+<td width="157">
+<p>SHOULD</p>
+</td>
+</tr>
+<tr>
+<td width="104">
+<p>18</p>
+</td>
+<td width="340">
+<p>An administrator must be able to search all events</p>
+</td>
+<td width="157">
+<p>COULD</p>
+</td>
+</tr>
+<tr>
+<td width="104">
+<p>19</p>
+</td>
+<td width="340">
+<p>An administrator must be able to cancel an event</p>
+</td>
+<td width="157">
+<p>SHOULD</p>
+</td>
+</tr>
+<tr>
+<td width="104">
+<p>20</p>
+</td>
+<td width="340">
+<p>An administrator must be able to view all bookings</p>
+</td>
+<td width="157">
+<p>SHOULD</p>
+</td>
+</tr>
+<tr>
+<td width="104">
+<p>21</p>
+</td>
+<td width="340">
+<p>An administrator must be able to cancel a booking</p>
+</td>
+<td width="157">
+<p>SHOULD</p>
+</td>
+</tr>
+<tr>
+<td width="104">
+<p>22</p>
+</td>
+<td width="340">
+<p>An administrator must be able to confirm a booking</p>
+</td>
+<td width="157">
+<p>SHOULD</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Non-functional Requirements</p>
+<p><u>&nbsp;</u></p>
+<table>
+<tbody>
+<tr>
+<td width="104">
+<p>Req. No</p>
+</td>
+<td width="340">
+<p>Requirement</p>
+</td>
+<td width="157">
+<p>Priority*</p>
+</td>
+</tr>
+<tr>
+<td width="104">
+<p>1</p>
+</td>
+<td width="340">
+<p>The EEMS should process input and return results within 10 seconds</p>
+</td>
+<td width="157">
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="104">
+<p>2</p>
+</td>
+<td width="340">
+<p>The EEMS should run on a range of devices from PCs to mobile phones</p>
+</td>
+<td width="157">
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="104">
+<p>3</p>
+</td>
+<td width="340">
+<p>The EEMS design should be sufficiently scalable and flexible to allow for further future enhancements</p>
+</td>
+<td width="157">
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="104">
+<p>4</p>
+</td>
+<td width="340">
+<p>The EEMS users should not experience critical system failures.&nbsp; 99.99% &lsquo;uptime&rsquo; should be achieved.</p>
+</td>
+<td width="157">
+<p>&nbsp;</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><u>&nbsp;</u></p>
+<p><u>&nbsp;</u></p>
+<p><u>&nbsp;</u></p>
+<p>Usability Requirements</p>
+<p><u>&nbsp;</u></p>
+<table>
+<tbody>
+<tr>
+<td width="104">
+<p>Req. No</p>
+</td>
+<td width="340">
+<p>Requirement</p>
+</td>
+<td width="157">
+<p>Priority*</p>
+</td>
+</tr>
+<tr>
+<td width="104">
+<p>1</p>
+</td>
+<td width="340">
+<p>The EEMS should incorporate a user-centric design</p>
+</td>
+<td width="157">
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="104">
+<p>2</p>
+</td>
+<td width="340">
+<p>The design should demonstrate evidence of a good understanding of interface design issues &ndash; for example, a consistent design for each form, layout of content, use of colour schemes and images, navigational methods, usability when viewed at various screen resolutions and various monitor dimensions.&nbsp;</p>
+</td>
+<td width="157">
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="104">
+<p>3</p>
+</td>
+<td width="340">
+<p>All data entry forms should be short and easy to complete and there should be entry validation.</p>
+</td>
+<td width="157">
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="104">
+<p>4</p>
+</td>
+<td width="340">
+<p>The EEMS short have clear and intuitive navigation</p>
+</td>
+<td width="157">
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="104">
+<p>5</p>
+</td>
+<td width="340">
+<p>The EEMS should comply with WW3 Web Accessibility Standards (WCAG)</p>
+<p>Text easy to read and language and language style should be appropriate with absence of grammar / spelling errors</p>
+</td>
+<td width="157">
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="104">
+<p>&nbsp;</p>
+</td>
+<td width="340">
+<p>There should be a clear layout which remains consistent throughout the application.&nbsp; Style, layout and content should be appropriate for the purpose of the application.&nbsp;</p>
+</td>
+<td width="157">
+<p>&nbsp;</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ## The Actual Task
 ### Extra-curricular eVent mAnagement (EVA)
 Your task is to create a Java desktop application to create and manage student-led events at the university.
