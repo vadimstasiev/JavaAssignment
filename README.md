@@ -7,7 +7,8 @@
 |   Unit title & code	|   CIS016-1 Principles of Programming / CIS096-1 Principles of Programming and Data Structures	|
 |   Weighting of Assessment	|   70%	|
 |   Assessment type 	|   Code and Report // Presentation    |
-    “Submit a word-processed report detailing the work that you have done. // Submit an individual video presentation about your work.”
+
+> “Submit a word-processed report detailing the work that you have done. // Submit an individual video presentation about your work.”
 
 ## Deliverables 
 1. Project Report (max 9000 words or 2 pages), 20% of grade.
@@ -20,8 +21,10 @@
 3. A .zip file containing your running the complete program code, 50% of grade.
     - Instructions how to run the code should go into the project report above.
 ## Possible Discussion Topics for the Report
-    - Reflect upon your strength and weaknesses in relation to a programming project you have undertaken and use these to improve your program code 3
-    - Outline a test routine to check the logical correctness of a program you have written and provide the results of your testing demonstrating a working piece of code
+
+- Reflect upon your strength and weaknesses in relation to a programming project you have undertaken and use these to improve your program code 3
+- Outline a test routine to check the logical correctness of a program you have written and provide the results of your testing demonstrating a working piece of code
+
 ## The Actual Task
 ### Extra-curricular eVent mAnagement (EVA)
 Your task is to create a Java desktop application to create and manage student-led events at the university.
