@@ -1,4 +1,4 @@
-##### Note: If you want to get started setting up the project head to the [setting up readme](./EVA#open-the-existing-project).
+##### Note: If you want to get started with the project head to [open the project](./EVA#open-the-existing-project).
 # EVA - Simplified Brief
 
 
