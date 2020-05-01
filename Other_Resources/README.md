@@ -40,4 +40,3 @@ Useful resources for styling:
 
 ## [CSS in JavaFx](./JavaFx/027_css)
 > ![javafx_css.png](./img/javafx_css.png)
-
