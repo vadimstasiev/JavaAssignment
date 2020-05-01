@@ -1,4 +1,6 @@
-##### Note: If you want to get started with the project head to [open the project](./EVA#open-the-existing-project).
+##### Note: Please read the GitHub [readme](./Learning_Resources/1-GitHub/README.md).
+##### Note: If you want to get started with the project head to [this section](./EVA#open-the-existing-project).
+
 # EVA - Simplified Brief
 
 
@@ -28,7 +30,7 @@
 <br>
 <br>
 
-Functional Requirements
+# Functional Requirements
 
 EEMS = Extra-Curricular Events Management System
 
@@ -291,7 +293,9 @@ EEMS = Extra-Curricular Events Management System
 </table>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<p>Non-functional Requirements</p>
+
+# Non-functional Requirements
+
 <p><u>&nbsp;</u></p>
 <table>
 <tbody>
@@ -355,7 +359,9 @@ EEMS = Extra-Curricular Events Management System
 <p><u>&nbsp;</u></p>
 <p><u>&nbsp;</u></p>
 <p><u>&nbsp;</u></p>
-<p>Usability Requirements</p>
+
+# Usability Requirements
+
 <p><u>&nbsp;</u></p>
 <table>
 <tbody>
