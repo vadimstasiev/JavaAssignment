@@ -1,4 +1,4 @@
-##### Note: If you want to get started setting up the project head to the [setting up readme](./Learning_Resources/2-Setting_Up/README.md).
+##### Note: If you want to get started setting up the project head to the [setting up readme](./EVA#open-the-existing-project).
 # EVA - Simplified Brief
 
 
