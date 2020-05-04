@@ -2,7 +2,7 @@
 # Introduction to FXML
 - [Source Code](../JavaFx/031_fxml)
 
-In the `start` function, it's going to kick off the `FXML` file with following line:
+In the `start` function, it's going to kick off the `FXML` file with the following line:
 ```java
 Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
 ```
@@ -54,4 +54,29 @@ public class Controller {
     }
 
 }
+```
+> [Video Tutorial](https://www.youtube.com/watch?v=RojHZhj3UQA)
+# Initializing and Binding
+- [Source Code](../JavaFx/033_fxml)
+## Initializer
+
+An initializer is for whenever you want to run code after the view (`FXML`) loads, for instance, this is a good place to load some user data from the database.
+
+```java
+public class Controller implements Initializable {
+
+    @Override
+    // this method is called as soon as the view is loaded
+    public void initialize(URL location, ResourceBundle resources) {
+        System.out.println("Loading user data...")
+    }
+
+}
+```
+## Binding
+As an example, the goal here will be to bind the text of one label to another. All you have to do is use `${firstLabel.text}` for the text of the label that you want to bind to `firstLabel`.
+
+```xml
+<Label text="I love bacon" fx:id="firstLabel"/>
+<Label text="${firstLabel.text}" fx:id="secondLabel"/>
 ```

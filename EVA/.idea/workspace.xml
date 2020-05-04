@@ -2,7 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60b90d61-f3dd-4df5-b6c4-2084a6e0be5c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Other_Resources/Resources.md" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/EVA.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/EVA.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/PrimaryController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/SecondaryController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/primary.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/secondary.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/null/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/null/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Learning_Resources/JavaFx/JavaFx_FXML/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Learning_Resources/JavaFx/JavaFx_FXML/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,6 +26,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="1bGOE3VP2Fos7Op4U14L3hznvDA" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -20,10 +41,13 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RunManager">
     <configuration name="Run" type="MavenRunConfiguration" factoryName="Maven">
@@ -37,7 +61,7 @@
             </option>
             <option name="goals">
               <list>
-                <option value="javafx:compile" />
+                <option value="javafx:run" />
               </list>
             </option>
             <option name="pomFileName" />
@@ -50,7 +74,7 @@
         </option>
       </MavenSettings>
       <method v="2">
-        <option name="Maven.BeforeRunTask" enabled="true" file="$PROJECT_DIR$/pom.xml" goal="javafx:run" />
+        <option name="Maven.BeforeRunTask" enabled="true" file="$PROJECT_DIR$/pom.xml" goal="javafx:compile" />
       </method>
     </configuration>
   </component>
@@ -68,33 +92,49 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="383" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588255087637">
+    <state x="425" y="84" width="1092" height="799" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588439471509">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="383" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588255087637" />
-    <state width="1815" height="295" key="GridCell.Tab.0.bottom" timestamp="1588260120914">
+    <state x="425" y="84" width="1092" height="799" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588439471509" />
+    <state width="1859" height="295" key="GridCell.Tab.0.bottom" timestamp="1588591349538">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1815" height="295" key="GridCell.Tab.0.bottom/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588260120914" />
-    <state width="1815" height="295" key="GridCell.Tab.0.center" timestamp="1588260120914">
+    <state width="1859" height="295" key="GridCell.Tab.0.bottom/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588591349538" />
+    <state width="1859" height="295" key="GridCell.Tab.0.center" timestamp="1588591349538">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1815" height="295" key="GridCell.Tab.0.center/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588260120914" />
-    <state width="1815" height="295" key="GridCell.Tab.0.left" timestamp="1588260120914">
+    <state width="1859" height="295" key="GridCell.Tab.0.center/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588591349538" />
+    <state width="1859" height="295" key="GridCell.Tab.0.left" timestamp="1588591349538">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1815" height="295" key="GridCell.Tab.0.left/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588260120914" />
-    <state width="1815" height="295" key="GridCell.Tab.0.right" timestamp="1588260120914">
+    <state width="1859" height="295" key="GridCell.Tab.0.left/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588591349538" />
+    <state width="1859" height="295" key="GridCell.Tab.0.right" timestamp="1588591349538">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1815" height="295" key="GridCell.Tab.0.right/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588260120914" />
-    <state x="409" y="114" key="SettingsEditor" timestamp="1588262846028">
+    <state width="1859" height="295" key="GridCell.Tab.0.right/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588591349538" />
+    <state width="1815" height="364" key="GridCell.Tab.1.bottom" timestamp="1588537700460">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="409" y="114" key="SettingsEditor/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588262846028" />
-    <state x="625" y="364" key="com.intellij.ide.util.TipDialog" timestamp="1588257125917">
+    <state width="1815" height="364" key="GridCell.Tab.1.bottom/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588537700460" />
+    <state width="1815" height="364" key="GridCell.Tab.1.center" timestamp="1588537700460">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="625" y="364" key="com.intellij.ide.util.TipDialog/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588257125917" />
+    <state width="1815" height="364" key="GridCell.Tab.1.center/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588537700460" />
+    <state width="1815" height="364" key="GridCell.Tab.1.left" timestamp="1588537700459">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state width="1815" height="364" key="GridCell.Tab.1.left/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588537700459" />
+    <state width="1815" height="364" key="GridCell.Tab.1.right" timestamp="1588537700460">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state width="1815" height="364" key="GridCell.Tab.1.right/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588537700460" />
+    <state x="409" y="114" key="SettingsEditor" timestamp="1588437825645">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state x="409" y="114" key="SettingsEditor/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588437825645" />
+    <state x="625" y="364" key="com.intellij.ide.util.TipDialog" timestamp="1588590983701">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state x="625" y="364" key="com.intellij.ide.util.TipDialog/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588590983701" />
   </component>
 </project>
