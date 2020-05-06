@@ -39,7 +39,7 @@ public class App extends Application {
 //        );
 
 //        userObject.deleteUser(1);
-        scene = new Scene(loadFXML("Login"));
+        scene = new Scene(loadFXML("Register"));
         stage.setScene(scene);
         stage.show();
     }

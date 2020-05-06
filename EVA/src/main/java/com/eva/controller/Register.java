@@ -6,11 +6,11 @@ import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
-public class Login {
+public class Register {
 
 
     @FXML
-    public void switchToRegister(ActionEvent actionEvent) throws IOException {
-        App.setRoot("Register");
+    public void switchToLogin(ActionEvent actionEvent) throws IOException {
+        App.setRoot("Login");
     }
 }
