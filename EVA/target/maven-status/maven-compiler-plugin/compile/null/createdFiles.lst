@@ -1,4 +1,8 @@
-com\eva\PrimaryController.class
-com\eva\SecondaryController.class
+com\eva\controller\Login.class
+com\eva\helpers\DatabaseInterface.class
 module-info.class
 com\eva\App.class
+com\eva\model\User.class
+com\eva\PrimaryController.class
+com\eva\SecondaryController.class
+com\eva\DBconnect.class

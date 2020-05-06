@@ -2,26 +2,61 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60b90d61-f3dd-4df5-b6c4-2084a6e0be5c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/EVA.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/EVA.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/PC.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eva/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eva/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/eva/Home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/eva/view/Home.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/eva/Item.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/eva/view/Item.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/eva/images/agencies.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/eva/view/images/agencies.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/eva/images/icons8_500px_64px.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/eva/view/images/icons8_500px_64px.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/eva/images/icons8_Handshake_64px.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/eva/view/images/icons8_Handshake_64px.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/eva/images/icons8_Share_64px.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/eva/view/images/icons8_Share_64px.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/eva/images/icons8_US_Dollar_64px.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/eva/view/images/icons8_US_Dollar_64px.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/eva/images/icons8_Workflow_64px.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/eva/view/images/icons8_Workflow_64px.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/eva/images/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/eva/view/images/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/eva/images/projections.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/eva/view/images/projections.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/eva/images/projects.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/eva/view/images/projects.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/eva/images/reliabilty.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/eva/view/images/reliabilty.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/eva/primary.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/eva/view/primary.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/eva/secondary.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/eva/view/secondary.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/eva/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/eva/view/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/eva/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/Home.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/Item.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/eva/PrimaryController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/eva/SecondaryController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/images/agencies.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/images/icons8_500px_64px.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/images/icons8_Handshake_64px.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/images/icons8_Share_64px.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/images/icons8_US_Dollar_64px.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/images/icons8_Workflow_64px.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/images/projections.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/images/projects.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/images/reliabilty.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/eva/primary.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/eva/secondary.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/style.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/null/createdFiles.lst" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/null/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learning_Resources/JavaFx/JavaFx_FXML/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Learning_Resources/JavaFx/JavaFx_FXML/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -34,7 +69,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1bGOE3VP2Fos7Op4U14L3hznvDA" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -48,6 +85,12 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Repositories\JavaAssignment\EVA\src\main\resources\com\eva" />
+      <recent name="E:\Repositories\JavaAssignment\EVA\src\main\resources\com\eva\view" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Run" type="MavenRunConfiguration" factoryName="Maven">
@@ -96,45 +139,53 @@
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="425" y="84" width="1092" height="799" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588439471509" />
-    <state width="1859" height="295" key="GridCell.Tab.0.bottom" timestamp="1588591349538">
+    <state x="324" y="134" key="CommitChangelistDialog2" timestamp="1588782753508">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1859" height="295" key="GridCell.Tab.0.bottom/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588591349538" />
-    <state width="1859" height="295" key="GridCell.Tab.0.center" timestamp="1588591349538">
+    <state x="324" y="134" key="CommitChangelistDialog2/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588782753508" />
+    <state width="1859" height="292" key="GridCell.Tab.0.bottom" timestamp="1588783311553">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1859" height="295" key="GridCell.Tab.0.center/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588591349538" />
-    <state width="1859" height="295" key="GridCell.Tab.0.left" timestamp="1588591349538">
+    <state width="1859" height="292" key="GridCell.Tab.0.bottom/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588783311553" />
+    <state width="1859" height="292" key="GridCell.Tab.0.center" timestamp="1588783311553">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1859" height="295" key="GridCell.Tab.0.left/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588591349538" />
-    <state width="1859" height="295" key="GridCell.Tab.0.right" timestamp="1588591349538">
+    <state width="1859" height="292" key="GridCell.Tab.0.center/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588783311553" />
+    <state width="1859" height="292" key="GridCell.Tab.0.left" timestamp="1588783311553">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1859" height="295" key="GridCell.Tab.0.right/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588591349538" />
-    <state width="1815" height="364" key="GridCell.Tab.1.bottom" timestamp="1588537700460">
+    <state width="1859" height="292" key="GridCell.Tab.0.left/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588783311553" />
+    <state width="1859" height="292" key="GridCell.Tab.0.right" timestamp="1588783311553">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1815" height="364" key="GridCell.Tab.1.bottom/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588537700460" />
-    <state width="1815" height="364" key="GridCell.Tab.1.center" timestamp="1588537700460">
+    <state width="1859" height="292" key="GridCell.Tab.0.right/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588783311553" />
+    <state width="1859" height="372" key="GridCell.Tab.1.bottom" timestamp="1588776394245">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1815" height="364" key="GridCell.Tab.1.center/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588537700460" />
-    <state width="1815" height="364" key="GridCell.Tab.1.left" timestamp="1588537700459">
+    <state width="1859" height="372" key="GridCell.Tab.1.bottom/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588776394245" />
+    <state width="1859" height="372" key="GridCell.Tab.1.center" timestamp="1588776394245">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1815" height="364" key="GridCell.Tab.1.left/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588537700459" />
-    <state width="1815" height="364" key="GridCell.Tab.1.right" timestamp="1588537700460">
+    <state width="1859" height="372" key="GridCell.Tab.1.center/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588776394245" />
+    <state width="1859" height="372" key="GridCell.Tab.1.left" timestamp="1588776394245">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1815" height="364" key="GridCell.Tab.1.right/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588537700460" />
+    <state width="1859" height="372" key="GridCell.Tab.1.left/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588776394245" />
+    <state width="1859" height="372" key="GridCell.Tab.1.right" timestamp="1588776394245">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state width="1859" height="372" key="GridCell.Tab.1.right/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588776394245" />
     <state x="409" y="114" key="SettingsEditor" timestamp="1588437825645">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="409" y="114" key="SettingsEditor/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588437825645" />
-    <state x="625" y="364" key="com.intellij.ide.util.TipDialog" timestamp="1588590983701">
+    <state x="625" y="364" key="com.intellij.ide.util.TipDialog" timestamp="1588763518077">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="625" y="364" key="com.intellij.ide.util.TipDialog/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588590983701" />
+    <state x="625" y="364" key="com.intellij.ide.util.TipDialog/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588763518077" />
+    <state x="585" y="250" key="run.anything.popup" timestamp="1588777135688">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state x="585" y="250" key="run.anything.popup/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588777135688" />
   </component>
 </project>
