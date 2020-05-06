@@ -5,4 +5,6 @@ module com.eva {
 
     opens com.eva to javafx.fxml;
     exports com.eva;
+	opens com.eva.controller to javafx.fxml;
+    exports com.eva.controller;
 }

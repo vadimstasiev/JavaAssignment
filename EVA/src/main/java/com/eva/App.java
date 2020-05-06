@@ -39,12 +39,12 @@ public class App extends Application {
 //        );
 
 //        userObject.deleteUser(1);
-        scene = new Scene(loadFXML("primary"));
+        scene = new Scene(loadFXML("Login"));
         stage.setScene(scene);
         stage.show();
     }
 
-    static void setRoot(String fxml) throws IOException {
+    public static void setRoot(String fxml) throws IOException {
         scene.setRoot(loadFXML(fxml));
     }
 

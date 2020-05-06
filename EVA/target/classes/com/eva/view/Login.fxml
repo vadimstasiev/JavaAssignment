@@ -1,28 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="360.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.Login">
+<VBox alignment="CENTER" spacing="20.0" style="-fx-min-height: 400; -fx-min-width: 250;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eva.controller.Login">
     <children>
-        <Button fx:id="loginBtn" layoutX="30.0" layoutY="305.0" mnemonicParsing="false" onAction="#login" prefHeight="34.0" prefWidth="300.0" text="LOG IN" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="305.0" />
-        <TextField fx:id="email" layoutX="30.0" layoutY="187.0" prefHeight="34.0" prefWidth="300.0" promptText="e-mail" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="187.0" />
-        <PasswordField fx:id="password" layoutX="30.0" layoutY="233.0" prefHeight="34.0" prefWidth="300.0" promptText="password" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="233.0" />
-        <Hyperlink fx:id="register" alignment="CENTER" layoutX="24.0" layoutY="350.0" onAction="#goToRegister" prefHeight="29.0" prefWidth="312.0" text="Don't you have an account? Create one now!" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="350.0">
+        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="166.0" prefWidth="360.0" text="EVA" textAlignment="JUSTIFY">
             <font>
-                <Font size="15.0" />
-            </font>
-        </Hyperlink>
-        <Label fx:id="errorLabel" layoutX="36.0" layoutY="159.0" prefHeight="20.0" prefWidth="300.0" textAlignment="CENTER" textFill="RED">
-            <font>
-                <Font size="14.0" />
+                <Font name="Bauhaus 93" size="96.0" />
             </font>
         </Label>
-      <Label layoutX="70.0" layoutY="49.0" text="Login">
-         <font>
-            <Font name="Bauhaus 93" size="96.0" />
-         </font>
-      </Label>
+        <TextField editable="false" layoutX="107.0" layoutY="14.0" opacity="0.0">
+            <cursor>
+                <Cursor fx:constant="DEFAULT" />
+            </cursor></TextField>
+      <Separator prefWidth="200.0" />
+        <TextField alignment="CENTER" layoutY="140.0" prefHeight="36.0" prefWidth="360.0" promptText="User ID">
+            <font>
+                <Font size="20.0" />
+            </font></TextField>
+        <PasswordField alignment="CENTER" layoutX="1.0" layoutY="184.0" prefHeight="36.0" prefWidth="360.0" promptText="Password">
+            <font>
+                <Font size="20.0" />
+            </font></PasswordField>
+      <Separator prefWidth="200.0" />
+        <ToggleButton contentDisplay="CENTER" layoutY="307.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="360.0" text="login" textAlignment="CENTER" onAction="#switchToRegister">
+            <font>
+                <Font name="Bauhaus 93" size="24.0" />
+            </font>
+        </ToggleButton>
     </children>
-</AnchorPane>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+</VBox>

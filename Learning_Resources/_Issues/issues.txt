@@ -1,0 +1,2 @@
+Ideally the app should be connected to the mySQL database through some sort of proxy, such as a server. The issue with it as it is is that the
+application must have the mySQL password built into it so that it can write and read data from it.
