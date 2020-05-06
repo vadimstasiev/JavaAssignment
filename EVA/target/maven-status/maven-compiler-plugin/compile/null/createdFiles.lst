@@ -6,4 +6,5 @@ com\eva\model\User.class
 com\eva\controller\Register.class
 com\eva\PrimaryController.class
 com\eva\SecondaryController.class
+com\eva\helpers\Password.class
 com\eva\DBconnect.class

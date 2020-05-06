@@ -13,4 +13,5 @@ public class Login {
     public void switchToRegister(ActionEvent actionEvent) throws IOException {
         App.setRoot("Register");
     }
+
 }

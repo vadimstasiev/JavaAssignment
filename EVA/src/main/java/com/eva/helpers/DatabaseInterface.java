@@ -52,7 +52,7 @@ public class DatabaseInterface {
         }
     }
 
-    public void getData(){
+    public void getData(){  //just for testing - ignore
         try {
             DBconnect();
             String query = "SELECT * FROM users";
@@ -69,7 +69,7 @@ public class DatabaseInterface {
         }
     }
 
-    public void getDataFromTable(String table){
+    public void getDataFromTable(String table){  //just for testing - ignore
         try {
             String query = "SELECT * FROM " + table;
             res = st.executeQuery(query);
