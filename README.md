@@ -1,4 +1,4 @@
-##### Note: Please read the GitHub [readme](./Learning_Resources/1-GitHub/README.md).
+##### Note: Please read the GitHub [readme](./Learning_Resources/GitHub/README.md).
 ##### Note: If you want to get started with the project head to [this section](./EVA#open-the-existing-project).
 
 # EVA - Simplified Brief
