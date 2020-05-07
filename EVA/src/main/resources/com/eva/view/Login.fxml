@@ -6,11 +6,16 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" spacing="20.0" style="-fx-min-height: 400; -fx-min-width: 250;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eva.controller.Login">
+<VBox alignment="CENTER" minHeight="700.0" minWidth="300.0" spacing="20.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eva.controller.Login">
     <children>
         <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="166.0" prefWidth="360.0" text="EVA" textAlignment="JUSTIFY">
             <font>
                 <Font name="Bauhaus 93" size="96.0" />
+            </font>
+        </Label>
+        <Label fx:id="error" alignment="CENTER" contentDisplay="CENTER" opacity="0.0" prefHeight="70.0" prefWidth="370.0" text="Error goes here!" textAlignment="CENTER" textFill="RED" wrapText="true">
+            <font>
+                <Font size="19.0" />
             </font>
         </Label>
         <TextField editable="false" layoutX="107.0" layoutY="14.0" opacity="0.0">
