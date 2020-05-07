@@ -7,7 +7,12 @@ import com.eva.model.User;
 import com.eva.App;
 
 import java.io.IOException;
+import java.sql.SQLDataException;
+import java.sql.SQLException;
+import java.sql.SQLIntegrityConstraintViolationException;
+import java.sql.SQLTimeoutException;
 
+import com.mysql.cj.jdbc.exceptions.CommunicationsException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -38,7 +43,7 @@ public class Register {
     @FXML
     private TextField confirm_password;
     @FXML
-    public void register(ActionEvent actionEvent) throws IOException {
+    public void register(ActionEvent actionEvent) throws IOException, SQLException {
         int user_id_int = 0;
         hide_error();
         // password validation
@@ -75,8 +80,10 @@ public class Register {
                 );
                 App.modal("Success", "You have successfully registered, now please log in.", "SuccessAlertBox");
                 App.setRoot("Login");
-            } catch(Exception error) {
+            } catch(CommunicationsException e) {
                 App.modal("Error", "Error connecting to the database.", "ErrorAlertBox");
+            } catch(SQLIntegrityConstraintViolationException e) {
+                App.modal("Error", "Account already exists.", "ErrorAlertBox");
             }
         }
     }

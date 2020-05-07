@@ -2,10 +2,14 @@ package com.eva.controller;
 
 import com.eva.App;
 import java.io.IOException;
+import java.sql.SQLException;
+import java.sql.SQLTimeoutException;
+import java.text.ParseException;
 
 import com.eva.helpers.DatabaseInterface;
 import com.eva.helpers.Password;
 import com.eva.model.User;
+import com.mysql.cj.jdbc.exceptions.CommunicationsException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -43,28 +47,23 @@ public class Login {
         } else {
             try {
                 // attempt to convert the user_id to int to verify it is an integer
-                try {
-                    user_id_int = Integer.parseInt(user_id.getText().trim());
-                } catch (Exception e){
-                    show_error("Please enter an integer value");
-                    throw e;
-                }
+                // throws NumberFormatException
+                user_id_int = Integer.parseInt(user_id.getText().trim());
                 // password validation
-                try {
-                    if(password.getText().equals("")) {
-                        show_error("Please enter your password");
-                    } else {
-                        if (Password.checkPassword(password.toString(), User.getUserHashedPassword(user_id_int))) {
-                            App.modal("Temporary log in replacement", "Log in replacement. But you're logged in, good job!", "SuccessAlertBox");
-                        } else {
-                            show_error("Wrong Password!");
-                        }
-                    }
-                } catch (Exception e) {
-                    App.modal("error", "Error connecting to the database.", "ErrorAlertBox");
-                }
 
-            } catch (Exception e) {
+                if(password.getText().equals("")) {
+                    show_error("Please enter your password");
+                } else {
+                    if (Password.checkPassword(password.toString(), User.getUserHashedPassword(user_id_int))) {
+                        App.modal("Temporary log in replacement", "Log in replacement. But you're logged in, good job!", "SuccessAlertBox");
+                    } else {
+                        show_error("Wrong Password!");
+                    }
+                }
+            } catch (NumberFormatException e){
+                show_error("Please enter an integer value");
+            } catch(CommunicationsException e) {
+                App.modal("Error", "Error connecting to the database.", "ErrorAlertBox");
             }
         }
 

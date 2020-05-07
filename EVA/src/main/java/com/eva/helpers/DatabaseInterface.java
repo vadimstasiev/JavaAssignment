@@ -1,6 +1,8 @@
 package com.eva.helpers;
 
 
+import com.mysql.cj.jdbc.exceptions.CommunicationsException;
+
 import java.sql.*;
 
 public class DatabaseInterface {
@@ -13,47 +15,66 @@ public class DatabaseInterface {
     private static final String USER = "root";
     private static final String PASSWORD = "";
     private static final String URL = "jdbc:mysql://localhost/" + DBNAME + "?useTimezone=true&serverTimezone=UTC";
+    private static Object SQLTimeoutException;
+    private static Object SQLException;
 
-    public static void DBconnect() {
+    public static void DBconnect() throws CommunicationsException {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(URL, USER, PASSWORD);
             st = con.createStatement();
-        } catch (Exception error) {
-            System.out.println("Error: " + error);
+        } catch (CommunicationsException e) {
+            System.out.println("Error: " + e);
+            throw e;
+        } catch (SQLException e) {
+            System.out.println("Error: " + e);
+        } catch (ClassNotFoundException e) {
+            System.out.println("Error: No JDBC driver installed");
         }
     }
 
-    public static void DBdisconnect() {
+    public static void DBdisconnect() throws SQLException {
         try {
             if (con != null && !con.isClosed()) {
                 con.close();
             }
-        } catch (Exception error) {
-            System.out.println("Error: " + error);
+        } catch (CommunicationsException e) {
+            System.out.println("Error: " + e);
+            throw e;
+        } catch (SQLException e) {
+            System.out.println("Error: " + e);
         }
+
     }
 
-    public static ResultSet dbExecuteQuery(String query)  {
+    public static ResultSet dbExecuteQuery(String query) throws SQLException {
+        DBconnect();
         try {
-            DBconnect();
             res = st.executeQuery(query);
-        } catch (Exception error) {
-            System.out.println("Error: " + error);
+        } catch (SQLIntegrityConstraintViolationException e) {
+            throw e;
+        } catch (SQLException e) {
+            System.out.println("Error: " + e);
+            System.out.println("Error in Query: " + query);
         }
+        DBdisconnect();
         return res;
     }
 
     public static void dbExecuteUpdate(String query) throws SQLException {
+        DBconnect();
         try {
-            DBconnect();
             st.executeUpdate(query);
-        } catch (Exception error) {
-            throw error;
+        } catch (SQLIntegrityConstraintViolationException e) {
+            throw e;
+        } catch (SQLException e) {
+            System.out.println("Error: " + e);
+            System.out.println("Error in Query: " + query);
         }
+        DBdisconnect();
     }
 
-    public static void getData(){  //just for testing - ignore
+    public static void getData() {  //just for testing - ignore
         try {
             DBconnect();
             String query = "SELECT * FROM users";
