@@ -73,8 +73,10 @@ public class Register {
                         false,
                         Password.encryptPassword(password.toString())
                 );
+                App.modal("Success", "You have successfully registered, now please log in.", "SuccessAlertBox");
+                App.setRoot("Login");
             } catch(Exception error) {
-                App.modal("error", "Error connecting to the database.", "AlertBox");
+                App.modal("Error", "Error connecting to the database.", "ErrorAlertBox");
             }
         }
     }

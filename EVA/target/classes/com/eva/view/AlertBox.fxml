@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" spacing="20.0" style="-fx-min-height: 200; -fx-min-width: 250;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eva.controller.AlertBox">
+<VBox alignment="CENTER" spacing="20.0" style="-fx-min-height: 200; -fx-min-width: 250;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eva.controller.ErrorAlertBox">
    <children>
       <Label fx:id="errorLabel" text="" textFill="#e80000">
          <font>

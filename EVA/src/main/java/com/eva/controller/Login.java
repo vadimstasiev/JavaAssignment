@@ -55,13 +55,13 @@ public class Login {
                         show_error("Please enter your password");
                     } else {
                         if (Password.checkPassword(password.toString(), User.getUserHashedPassword(user_id_int))) {
-                            App.modal("Temporary log in replacement", "Log in replacement. But you're logged in, good job!", "AlertBox");
+                            App.modal("Temporary log in replacement", "Log in replacement. But you're logged in, good job!", "SuccessAlertBox");
                         } else {
                             show_error("Wrong Password!");
                         }
                     }
                 } catch (Exception e) {
-                    App.modal("error", "Error connecting to the database.", "AlertBox");
+                    App.modal("error", "Error connecting to the database.", "ErrorAlertBox");
                 }
 
             } catch (Exception e) {
