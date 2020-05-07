@@ -34,13 +34,14 @@ public class DatabaseInterface {
         }
     }
 
-    public static void dbExecuteQuery(String query)  {
+    public static ResultSet dbExecuteQuery(String query)  {
         try {
             DBconnect();
             res = st.executeQuery(query);
         } catch (Exception error) {
             System.out.println("Error: " + error);
         }
+        return res;
     }
 
     public static void dbExecuteUpdate(String query) throws SQLException {
@@ -52,7 +53,7 @@ public class DatabaseInterface {
         }
     }
 
-    public void getData(){  //just for testing - ignore
+    public static void getData(){  //just for testing - ignore
         try {
             DBconnect();
             String query = "SELECT * FROM users";
@@ -69,7 +70,7 @@ public class DatabaseInterface {
         }
     }
 
-    public void getDataFromTable(String table){  //just for testing - ignore
+    public static void getDataFromTable(String table){  //just for testing - ignore
         try {
             String query = "SELECT * FROM " + table;
             res = st.executeQuery(query);

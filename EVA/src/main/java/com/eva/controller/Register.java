@@ -52,7 +52,7 @@ public class Register {
             show_error("Please enter your user ID");
         } else {
             try {
-                // attempt to convert the error to int to verify it is an integer
+                // attempt to convert the user_id to int to verify it is an integer
                 user_id_int = Integer.parseInt(user_id.getText().trim());
             } catch (Exception error) {
                 show_error("Please enter an integer value");
@@ -60,9 +60,7 @@ public class Register {
         }
         if(error.getText()=="") {
             try {
-                DatabaseInterface connect = new DatabaseInterface();
-                User userObject = new User(connect);
-                userObject.createUser(
+                User.createUser(
                         user_id_int,
                         "",
                         "",
@@ -75,7 +73,6 @@ public class Register {
                         false,
                         Password.encryptPassword(password.toString())
                 );
-//              userObject.deleteUser(1);
             } catch(Exception error) {
                 App.modal("error", "Error connecting to the database.", "AlertBox");
             }

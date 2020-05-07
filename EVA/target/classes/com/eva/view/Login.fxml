@@ -23,16 +23,16 @@
                 <Cursor fx:constant="DEFAULT" />
             </cursor></TextField>
       <Separator prefWidth="200.0" />
-        <TextField alignment="CENTER" layoutY="140.0" prefHeight="36.0" prefWidth="360.0" promptText="User ID">
+        <TextField fx:id="user_id" alignment="CENTER" layoutY="140.0" prefHeight="36.0" prefWidth="360.0" promptText="User ID">
             <font>
                 <Font size="20.0" />
             </font></TextField>
-        <PasswordField alignment="CENTER" layoutX="1.0" layoutY="184.0" prefHeight="36.0" prefWidth="360.0" promptText="Password">
+        <PasswordField fx:id="password" alignment="CENTER" layoutX="1.0" layoutY="184.0" prefHeight="36.0" prefWidth="360.0" promptText="Password">
             <font>
                 <Font size="20.0" />
             </font></PasswordField>
       <Separator prefWidth="200.0" />
-        <ToggleButton contentDisplay="CENTER" layoutY="307.0" mnemonicParsing="false" onAction="#switchToRegister" prefHeight="60.0" prefWidth="360.0" text="login" textAlignment="CENTER">
+        <ToggleButton contentDisplay="CENTER" layoutY="307.0" mnemonicParsing="false" onAction="#login" prefHeight="60.0" prefWidth="360.0" text="login" textAlignment="CENTER">
             <font>
                 <Font name="Bauhaus 93" size="24.0" />
             </font>
