@@ -43,12 +43,12 @@ public class DatabaseInterface {
         }
     }
 
-    public static void dbExecuteUpdate(String query) {
+    public static void dbExecuteUpdate(String query) throws SQLException {
         try {
             DBconnect();
             st.executeUpdate(query);
         } catch (Exception error) {
-            System.out.println("Error: " + error);
+            throw error;
         }
     }
 

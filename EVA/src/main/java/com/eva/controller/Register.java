@@ -38,7 +38,7 @@ public class Register {
     @FXML
     private TextField confirm_password;
     @FXML
-    public void register(ActionEvent actionEvent) {
+    public void register(ActionEvent actionEvent) throws IOException {
         int user_id_int = 0;
         hide_error();
         // password validation
@@ -51,31 +51,34 @@ public class Register {
         if(user_id.getText()=="") {
             show_error("Please enter your user ID");
         } else {
-            try{
+            try {
                 // attempt to convert the error to int to verify it is an integer
                 user_id_int = Integer.parseInt(user_id.getText().trim());
             } catch (Exception error) {
                 show_error("Please enter an integer value");
             }
         }
-
         if(error.getText()=="") {
-        DatabaseInterface connect = new DatabaseInterface();
-        User userObject = new User(connect);
-        userObject.createUser(
-                user_id_int,
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                false,
-                Password.encryptPassword(password.toString())
-        );
-//        userObject.deleteUser(1);
+            try {
+                DatabaseInterface connect = new DatabaseInterface();
+                User userObject = new User(connect);
+                userObject.createUser(
+                        user_id_int,
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        false,
+                        Password.encryptPassword(password.toString())
+                );
+//              userObject.deleteUser(1);
+            } catch(Exception error) {
+                App.modal("error", "Error connecting to the database.", "AlertBox");
+            }
         }
     }
 }

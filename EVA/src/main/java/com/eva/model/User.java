@@ -3,6 +3,8 @@ package com.eva.model;
 import com.eva.helpers.DatabaseInterface;
 import javafx.beans.property.*;
 
+import java.sql.SQLException;
+
 public class User {
     private final DatabaseInterface databaseInterface;
 
@@ -23,9 +25,8 @@ public class User {
                            String postcode,
                            String dob,
                            Boolean isOrganizer,
-                           String hashed_password) {
+                           String hashed_password) throws SQLException {
         databaseInterface.getData();
-        try{
             String query = "INSERT INTO `users` " +
                     "(`id`, `first_name`, `last_name`, `gender`, `address_line`, `town`, `county`, `postcode`, `dob`, `isOrganizer`, `hashed_password`)" +
                     " VALUES " +
@@ -42,14 +43,14 @@ public class User {
                     "', '" + hashed_password +"');";
             System.out.println(query);
             databaseInterface.dbExecuteUpdate(query);
-        } catch (Exception error) {
-        }
         databaseInterface.getData();
     }
     public void deleteUser(int _id) {
         databaseInterface.getData();
         String query = "DELETE FROM users WHERE id = " + _id;
-        databaseInterface.dbExecuteUpdate(query);
+        try {
+            databaseInterface.dbExecuteUpdate(query);
+        } catch (Exception error) {}
         databaseInterface.getData();
     }
 }

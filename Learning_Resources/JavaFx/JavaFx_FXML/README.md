@@ -80,3 +80,8 @@ As an example, the goal here will be to bind the text of one label to another. A
 <Label text="I love bacon" fx:id="firstLabel"/>
 <Label text="${firstLabel.text}" fx:id="secondLabel"/>
 ```
+# Passing Parameters Directly From the Caller to the Controller
+
+[Info Source](https://stackoverflow.com/questions/14187963/passing-parameters-javafx-fxml)
+
+Pass custom data to an FXML controller by retrieving the controller from the FXML loader instance and calling a method on the controller to initialize it with the required data values.

@@ -8,3 +8,4 @@ com\eva\PrimaryController.class
 com\eva\SecondaryController.class
 com\eva\helpers\Password.class
 com\eva\DBconnect.class
+com\eva\controller\AlertBox.class

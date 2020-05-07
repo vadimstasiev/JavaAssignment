@@ -135,8 +135,6 @@ This will show how to merge a branch `master` with a branch `SecondaryBranch`.
 
 In this example, the `SecondaryBranch` is ahead of `master` by 1 commit, in which it was added a file.
 - We are currenty on the `SecondaryBranch`.
-  > *Which can be obtained just like a repository, by **cloning**. You can get the link by selecting the branch on the repository page.*
-    > ![cloning_branch](./img/cloning_branch.png)
 
 - Switch to `master` and pull:
   ```bash
@@ -157,6 +155,10 @@ In this example, the `SecondaryBranch` is ahead of `master` by 1 commit, in whic
   ```bash
   git push
   ```
+  
+ > *Note: Any given branch can be obtained by cloning the whole repository, if you want to switch to a specific branch you need to use `git checkout` name_of_branch, even if it doesn't appear in the `git branch` list.*
 
 #### Useful Resources:
 > - GitHub [Cheet Sheet](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf)
+> - [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/)
+> - [A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/)
