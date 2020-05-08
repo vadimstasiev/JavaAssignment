@@ -3,47 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="60b90d61-f3dd-4df5-b6c4-2084a6e0be5c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/eva/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eva/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/eva/controller/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eva/controller/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/eva/controller/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eva/controller/Register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/eva/helpers/DatabaseInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eva/helpers/DatabaseInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/eva/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eva/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eva/controller/AlertBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eva/controller/AlertBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/eva/view/ErrorAlertBox.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/eva/view/ErrorAlertBox.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/eva/view/FullRegister.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/eva/view/FullRegister.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/eva/view/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/eva/view/Login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/eva/view/primary.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/DBconnect.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/PrimaryController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/SecondaryController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/controller/AlertBox.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/controller/Login.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/controller/Register.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/helpers/DatabaseInterface.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/helpers/Password.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/model/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/view/AlertBox.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/view/ErrorAlertBox.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/view/Home.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/view/Item.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/view/Login.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/view/Register.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/view/SuccessAlertBox.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/view/images/agencies.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/view/images/icons8_500px_64px.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/view/images/icons8_Handshake_64px.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/view/images/icons8_Share_64px.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/view/images/icons8_US_Dollar_64px.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/view/images/icons8_Workflow_64px.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/view/images/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/view/images/projections.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/view/images/projects.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/view/images/reliabilty.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/view/primary.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/view/secondary.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/view/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/null/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/null/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/eva/view/Register.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/eva/view/Register.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,10 +162,10 @@
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="409" y="114" key="SettingsEditor/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588437825645" />
-    <state x="625" y="364" key="com.intellij.ide.util.TipDialog" timestamp="1588854338788">
+    <state x="625" y="364" key="com.intellij.ide.util.TipDialog" timestamp="1588953260862">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="625" y="364" key="com.intellij.ide.util.TipDialog/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588854338788" />
+    <state x="625" y="364" key="com.intellij.ide.util.TipDialog/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588953260862" />
     <state x="738" y="457" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588786140357">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>

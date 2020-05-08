@@ -12,7 +12,7 @@ import java.io.IOException;
 
 public class AlertBox {
     @FXML
-    ToggleButton closeButton;
+    Button closeButton;
 
     @FXML
     public void switchToLogin(ActionEvent actionEvent) throws IOException {

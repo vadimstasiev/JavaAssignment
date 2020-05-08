@@ -14,11 +14,11 @@
       <Separator prefWidth="200.0" />
       <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
          <children>
-            <ToggleButton fx:id="closeButton" contentDisplay="CENTER" maxWidth="150.0" mnemonicParsing="false" onAction="#switchToLogin" prefHeight="50.0" prefWidth="360.0" text="OK" textAlignment="CENTER">
+            <Button fx:id="closeButton" contentDisplay="CENTER" maxWidth="150.0" mnemonicParsing="false" onAction="#switchToLogin" prefHeight="50.0" prefWidth="360.0" text="OK" textAlignment="CENTER">
                <font>
                   <Font name="Bauhaus 93" size="24.0" />
                </font>
-            </ToggleButton>
+            </Button>
 
          </children>
       </HBox>
