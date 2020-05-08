@@ -72,6 +72,21 @@ public class DatabaseInterface {
         }
     }
 
+//    public static class MyPair
+//    {
+//        private final String key;
+//        private final String value;
+//
+//        public MyPair(String column, String data)
+//        {
+//            key   = column;
+//            value = data;
+//        }
+//
+//        public String key()   { return key; }
+//        public String value() { return value; }
+//    }
+
     public static void getData() {  //just for testing - ignore
         try {
             DBconnect();

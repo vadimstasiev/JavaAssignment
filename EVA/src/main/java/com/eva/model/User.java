@@ -3,11 +3,13 @@ package com.eva.model;
 import com.eva.helpers.DatabaseInterface;
 import com.mysql.cj.jdbc.exceptions.CommunicationsException;
 import javafx.beans.property.*;
+import javafx.util.Pair;
 
-import java.sql.ResultSet;
-import java.sql.SQLDataException;
-import java.sql.SQLException;
-import java.sql.SQLIntegrityConstraintViolationException;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class User {
     public static void updateUser() {
@@ -60,18 +62,34 @@ public class User {
         }
         return hashed_password;
     }
-    public static ResultSet getUserData(String hashed_password) throws CommunicationsException {
-        ResultSet res = null;
-        String query = "SELECT * FROM users WHERE hashed_password = " + hashed_password;
+    public static Map getUserData(int _id) throws CommunicationsException {
+
+
+        Map dataArray = new HashMap();
+        String query = "SELECT * FROM users WHERE id = " + _id;
         try {
-            res = DatabaseInterface.dbExecuteQuery(query);
+            ResultSet res = DatabaseInterface.dbExecuteQuery(query);
+            ResultSetMetaData rsmd = res.getMetaData();
+            int columnCount = rsmd.getColumnCount();
+
+
+            while (res.next()) {
+                if(res.getString("hashed_password")!="") {
+                    int resSize = res.getFetchSize();
+                    for(int i=1;i<=columnCount;i++) {
+                        dataArray.put(rsmd.getColumnName(i), res.getString(i));
+                        //System.out.println("Column: "+ rsmd.getColumnName(i)+"  Value: "+ res.getString(i));
+                    }
+                }
+            }
+
         } catch (CommunicationsException e) {
             throw e;
         } catch (Exception e) {
             System.out.println("Error in getUserHashedPassword() in User ");
             System.out.println("Error: " + e);
         }
-        return res;
+        return dataArray;
     }
     public static void deleteUser(int _id) throws SQLException {
         DatabaseInterface.getData();

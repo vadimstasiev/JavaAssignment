@@ -12,6 +12,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.ResultSet;
+import java.util.Map;
 
 /**
  * JavaFX App
@@ -57,7 +58,7 @@ public class App extends Application {
         return fxmlLoader;
     }
 
-    public static void newWindow(String title, String view, ResultSet data) throws IOException {
+    public static void newWindow(String title, String view, Map dataMap) throws IOException {
         FXMLLoader loader = loadFXML(view);
         Stage stage = new Stage();
         stage.setTitle(title);
@@ -69,7 +70,7 @@ public class App extends Application {
         );
         DataController controller = loader.<DataController>getController();
 
-        controller.initData(data);
+        controller.initData(dataMap);
         stage.show();
     }
 

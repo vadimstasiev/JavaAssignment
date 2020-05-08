@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.SQLTimeoutException;
 import java.text.ParseException;
+import java.util.Map;
 import java.util.stream.StreamSupport;
 
 import com.eva.helpers.DatabaseInterface;
@@ -64,24 +65,13 @@ public class Login {
                     } else {
                         if (Password.checkPassword(password.getText(), hashed_password)) {
                             // launch FullRegister
-                            Boolean isFullyRegistered = false;
-                            ResultSet res = User.getUserData(hashed_password);
-                            try {
-                                while (res.next()) {
-                                    if(res.getString("first_name")!=""&&res.getString("first_name")!="") {
-                                        isFullyRegistered = true;
-                                    }
-                                }
-                            } catch (SQLException e) {
-                                System.out.println("Error in looping resources (Login)");
-                                System.out.println("Error: " + e);
+                            Map dataMap = User.getUserData(user_id_int);
+                            if(dataMap.get("first_name")!=""&&dataMap.get("last_name")!="") { // checks if is fully registered
+                                App.newWindow("Complete Register","FullRegister", dataMap);
+                            } else {
+                                App.AlertBox("Temporary Main menu replacement", "You're fully registered, good job!", "SuccessAlertBox");
                             }
                             close();
-                            if(isFullyRegistered){
-                                App.AlertBox("Temporary Main menu replacement", "You're fully registered, good job!", "SuccessAlertBox");
-                            } else {
-                                App.newWindow("Complete Register","FullRegister", res);
-                            }
                         } else {
                             show_error("Wrong Password!");
                         }

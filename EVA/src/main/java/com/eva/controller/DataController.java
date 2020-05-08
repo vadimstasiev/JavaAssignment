@@ -1,11 +1,12 @@
 package com.eva.controller;
 
 import java.sql.ResultSet;
+import java.util.Map;
 
 public class DataController {
-    public ResultSet myData;
-    public void initData(ResultSet data) {
-        myData = data;
+    public Map dataMap;
+    public void initData(Map data) {
+        dataMap = data;
         System.out.println("Data Initialized");
     }
 }

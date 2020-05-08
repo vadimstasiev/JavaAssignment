@@ -91,7 +91,7 @@
    <Separator layoutX="10.0" layoutY="261.0" prefWidth="200.0" />
          <HBox alignment="CENTER" spacing="20.0">
             <children>
-               <Button contentDisplay="CENTER" layoutY="307.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="360.0" text="OK" textAlignment="CENTER">
+               <Button onAction="#updateDetails" contentDisplay="CENTER" layoutY="307.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="360.0" text="OK" textAlignment="CENTER">
                     <font>
                         <Font name="Bauhaus 93" size="24.0" />
                     </font>

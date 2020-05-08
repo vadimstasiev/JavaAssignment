@@ -4,6 +4,7 @@
       <w>bconnect</w>
       <w>bdisconnect</w>
       <w>jdbc</w>
+      <w>rsmd</w>
     </words>
   </dictionary>
 </component>

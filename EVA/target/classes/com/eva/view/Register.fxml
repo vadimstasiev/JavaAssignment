@@ -33,11 +33,11 @@
          </font>
       </PasswordField>
         <Separator prefWidth="200.0" />
-        <ToggleButton contentDisplay="CENTER" layoutY="307.0" mnemonicParsing="false" onAction="#register" prefHeight="60.0" prefWidth="360.0" text="Register" textAlignment="CENTER">
+        <Button contentDisplay="CENTER" layoutY="307.0" mnemonicParsing="false" onAction="#register" prefHeight="60.0" prefWidth="360.0" text="Register" textAlignment="CENTER">
             <font>
                 <Font name="Bauhaus 93" size="24.0" />
             </font>
-        </ToggleButton>
+        </Button>
         <Hyperlink onAction="#switchToLogin" text="Already have an account? Click to Login">
             <font>
                 <Font size="19.0" />
