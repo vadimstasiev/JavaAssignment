@@ -2,9 +2,11 @@ package com.eva.controller;
 
 import com.eva.App;
 import java.io.IOException;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.SQLTimeoutException;
 import java.text.ParseException;
+import java.util.stream.StreamSupport;
 
 import com.eva.helpers.DatabaseInterface;
 import com.eva.helpers.Password;
@@ -14,6 +16,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
 public class Login {
 
@@ -54,19 +58,48 @@ public class Login {
                 if(password.getText().equals("")) {
                     show_error("Please enter your password");
                 } else {
-                    if (Password.checkPassword(password.toString(), User.getUserHashedPassword(user_id_int))) {
-                        App.modal("Temporary log in replacement", "Log in replacement. But you're logged in, good job!", "SuccessAlertBox");
+                    String hashed_password = User.getUserHashedPassword(user_id_int);
+                    if (hashed_password=="") {
+                        show_error("Account Does Not Exist");
                     } else {
-                        show_error("Wrong Password!");
+                        if (Password.checkPassword(password.getText(), hashed_password)) {
+                            // launch FullRegister
+                            Boolean isFullyRegistered = false;
+                            ResultSet res = User.getUserData(hashed_password);
+                            try {
+                                while (res.next()) {
+                                    if(res.getString("first_name")!=""&&res.getString("first_name")!="") {
+                                        isFullyRegistered = true;
+                                    }
+                                }
+                            } catch (SQLException e) {
+                                System.out.println("Error in looping resources (Login)");
+                                System.out.println("Error: " + e);
+                            }
+                            close();
+                            if(isFullyRegistered){
+                                App.AlertBox("Temporary Main menu replacement", "You're fully registered, good job!", "SuccessAlertBox");
+                            } else {
+                                App.newWindow("Complete Register","FullRegister", res);
+                            }
+                        } else {
+                            show_error("Wrong Password!");
+                        }
                     }
                 }
             } catch (NumberFormatException e){
                 show_error("Please enter an integer value");
             } catch(CommunicationsException e) {
-                App.modal("Error", "Error connecting to the database.", "ErrorAlertBox");
+                App.AlertBox("Error", "Error connecting to the database.", "ErrorAlertBox");
             }
         }
 
 
+    }
+    @FXML
+    VBox window;
+    public void close(){
+        Stage stage = (Stage) window.getScene().getWindow();
+        stage.close();
     }
 }

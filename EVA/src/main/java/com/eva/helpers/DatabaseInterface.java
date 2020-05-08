@@ -57,7 +57,6 @@ public class DatabaseInterface {
             System.out.println("Error: " + e);
             System.out.println("Error in Query: " + query);
         }
-        DBdisconnect();
         return res;
     }
 
@@ -71,7 +70,6 @@ public class DatabaseInterface {
             System.out.println("Error: " + e);
             System.out.println("Error in Query: " + query);
         }
-        DBdisconnect();
     }
 
     public static void getData() {  //just for testing - ignore

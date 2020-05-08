@@ -46,7 +46,7 @@ public class User {
     }
     public static String getUserHashedPassword(int _id) throws CommunicationsException {
         String hashed_password = "";
-        String query = "SELECT * FROM users WHERE id = " + _id;
+        String query = "SELECT hashed_password FROM users WHERE id = " + _id;
         try {
             ResultSet res = DatabaseInterface.dbExecuteQuery(query);
             while (res.next()) {
@@ -54,11 +54,24 @@ public class User {
             }
         } catch (CommunicationsException e) {
             throw e;
-        } catch (SQLException e) {
+        } catch (Exception e) {
             System.out.println("Error in getUserHashedPassword() in User ");
             System.out.println("Error: " + e);
         }
         return hashed_password;
+    }
+    public static ResultSet getUserData(String hashed_password) throws CommunicationsException {
+        ResultSet res = null;
+        String query = "SELECT * FROM users WHERE hashed_password = " + hashed_password;
+        try {
+            res = DatabaseInterface.dbExecuteQuery(query);
+        } catch (CommunicationsException e) {
+            throw e;
+        } catch (Exception e) {
+            System.out.println("Error in getUserHashedPassword() in User ");
+            System.out.println("Error: " + e);
+        }
+        return res;
     }
     public static void deleteUser(int _id) throws SQLException {
         DatabaseInterface.getData();

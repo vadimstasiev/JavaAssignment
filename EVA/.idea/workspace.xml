@@ -2,16 +2,48 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60b90d61-f3dd-4df5-b6c4-2084a6e0be5c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/PC.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/PC.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eva/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eva/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/eva/controller/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eva/controller/Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/eva/controller/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eva/controller/Register.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/eva/helpers/DatabaseInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eva/helpers/DatabaseInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/eva/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eva/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/eva/view/SuccessAlertBox.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/eva/view/SuccessAlertBox.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/controller/Register.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/eva/controller/Register.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/eva/view/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/eva/view/Login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/eva/view/primary.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/DBconnect.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/PrimaryController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/SecondaryController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/controller/AlertBox.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/controller/Login.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/controller/Register.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/helpers/DatabaseInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/helpers/Password.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/model/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/view/AlertBox.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/view/ErrorAlertBox.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/view/Home.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/view/Item.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/view/Login.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/view/Register.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/view/SuccessAlertBox.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/view/images/agencies.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/view/images/icons8_500px_64px.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/view/images/icons8_Handshake_64px.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/view/images/icons8_Share_64px.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/view/images/icons8_US_Dollar_64px.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/view/images/icons8_Workflow_64px.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/view/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/view/images/projections.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/view/images/projects.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/view/images/reliabilty.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/view/primary.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/view/secondary.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/eva/view/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/null/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/null/inputFiles.lst" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +55,7 @@
       <list>
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -59,6 +92,9 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Repositories\JavaAssignment\EVA\src\main\resources\com\eva" />
       <recent name="E:\Repositories\JavaAssignment\EVA\src\main\resources\com\eva\view" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.eva.controller" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.eva.controller" />
@@ -114,30 +150,34 @@
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="425" y="84" width="1092" height="799" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588439471509" />
-    <state x="659" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588787786491">
+    <state x="734" y="249" key="#com.intellij.ide.util.MemberChooser" timestamp="1588946300938">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="659" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588787786491" />
+    <state x="734" y="249" key="#com.intellij.ide.util.MemberChooser/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588946300938" />
+    <state x="659" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588948212404">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state x="659" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588948212404" />
     <state x="324" y="134" key="CommitChangelistDialog2" timestamp="1588803861819">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="324" y="134" key="CommitChangelistDialog2/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588803861819" />
-    <state width="1815" height="299" key="GridCell.Tab.0.bottom" timestamp="1588887679230">
+    <state width="1815" height="298" key="GridCell.Tab.0.bottom" timestamp="1588949923120">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1815" height="299" key="GridCell.Tab.0.bottom/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588887679230" />
-    <state width="1815" height="299" key="GridCell.Tab.0.center" timestamp="1588887679230">
+    <state width="1815" height="298" key="GridCell.Tab.0.bottom/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588949923120" />
+    <state width="1815" height="298" key="GridCell.Tab.0.center" timestamp="1588949923120">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1815" height="299" key="GridCell.Tab.0.center/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588887679230" />
-    <state width="1815" height="299" key="GridCell.Tab.0.left" timestamp="1588887679230">
+    <state width="1815" height="298" key="GridCell.Tab.0.center/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588949923120" />
+    <state width="1815" height="298" key="GridCell.Tab.0.left" timestamp="1588949923120">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1815" height="299" key="GridCell.Tab.0.left/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588887679230" />
-    <state width="1815" height="299" key="GridCell.Tab.0.right" timestamp="1588887679230">
+    <state width="1815" height="298" key="GridCell.Tab.0.left/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588949923120" />
+    <state width="1815" height="298" key="GridCell.Tab.0.right" timestamp="1588949923120">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="1815" height="299" key="GridCell.Tab.0.right/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588887679230" />
+    <state width="1815" height="298" key="GridCell.Tab.0.right/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588949923120" />
     <state width="1815" height="363" key="GridCell.Tab.1.bottom" timestamp="1588853868732">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
@@ -166,6 +206,10 @@
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="738" y="457" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588786140357" />
+    <state x="635" y="168" key="refactoring.ChangeSignatureDialog" timestamp="1588947135949">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state x="635" y="168" key="refactoring.ChangeSignatureDialog/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1588947135949" />
     <state x="585" y="250" key="run.anything.popup" timestamp="1588859738113">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>

@@ -76,14 +76,14 @@ public class Register {
                         "",
                         "",
                         false,
-                        Password.encryptPassword(password.toString())
+                        Password.encryptPassword(password.getText())
                 );
-                App.modal("Success", "You have successfully registered, now please log in.", "SuccessAlertBox");
+                App.AlertBox("Success", "You have successfully registered, now please log in.", "SuccessAlertBox");
                 App.setRoot("Login");
             } catch(CommunicationsException e) {
-                App.modal("Error", "Error connecting to the database.", "ErrorAlertBox");
+                App.AlertBox("Error", "Error connecting to the database.", "ErrorAlertBox");
             } catch(SQLIntegrityConstraintViolationException e) {
-                App.modal("Error", "Account already exists.", "ErrorAlertBox");
+                App.AlertBox("Error", "Account already exists.", "ErrorAlertBox");
             }
         }
     }

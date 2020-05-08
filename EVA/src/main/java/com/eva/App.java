@@ -2,6 +2,7 @@ package com.eva;
 
 import com.eva.controller.AlertBox;
 
+import com.eva.controller.DataController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -10,6 +11,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.ResultSet;
 
 /**
  * JavaFX App
@@ -55,7 +57,24 @@ public class App extends Application {
         return fxmlLoader;
     }
 
-    public static void modal(String title, String message, String view) throws IOException {
+    public static void newWindow(String title, String view, ResultSet data) throws IOException {
+        FXMLLoader loader = loadFXML(view);
+        Stage stage = new Stage();
+        stage.setTitle(title);
+        //Display window and wait for it to be closed before returning
+        stage.setScene(
+                new Scene(
+                        (Pane) loader.load()
+                )
+        );
+        DataController controller = loader.<DataController>getController();
+
+        controller.initData(data);
+        stage.show();
+    }
+
+        // TODO: must rename this later
+    public static void AlertBox(String title, String message, String view) throws IOException {
         FXMLLoader loader = loadFXML(view);
         Stage modalStage = new Stage();
         //Block events to other windows

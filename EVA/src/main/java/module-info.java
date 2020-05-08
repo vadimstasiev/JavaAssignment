@@ -4,6 +4,7 @@ module com.eva {
     requires java.sql;
     requires mysql.connector.java;
     requires jbcrypt;
+    requires com.jfoenix;
 
     opens com.eva to javafx.fxml;
     exports com.eva;
