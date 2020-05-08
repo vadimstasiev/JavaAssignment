@@ -7,6 +7,7 @@ import com.mysql.cj.jdbc.exceptions.CommunicationsException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -15,7 +16,6 @@ import java.sql.SQLException;
 import java.sql.SQLIntegrityConstraintViolationException;
 
 public class FullRegister extends DataController {
-
     public void updateDetails(ActionEvent actionEvent) {
         System.out.println("Full Register Here");
         System.out.println("password: " + dataMap.get("hashed_password"));
@@ -88,5 +88,16 @@ public class FullRegister extends DataController {
     private void hide_error() {
         error.setOpacity(0);
         error.setText("");
+    }
+
+    public void logout(ActionEvent actionEvent) {
+        App.newSimpleWindow("Login", "Login");
+        close();
+    }
+    @FXML
+    VBox window;
+    public void close(){
+        Stage stage = (Stage) window.getScene().getWindow();
+        stage.close();
     }
 }

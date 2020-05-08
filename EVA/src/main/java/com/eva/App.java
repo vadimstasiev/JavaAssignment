@@ -23,28 +23,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-//        DatabaseInterface connect = new DatabaseInterface();
-////        connect.getData();
-//        User userObject = new User(connect);
-//        Integer id = null;
-//        userObject.createUser(
-//                3,
-//                "Vadim",
-//                "Stasiev",
-//                "Male",
-//                "dsgsdf ",
-//                "idk",
-//                "bedfordshire",
-//                "sdf",
-//                "21/03/1998",
-//                false,
-//                "kjdfgbiufh3wur3hkjb3jwb"
-//        );
-
-//        userObject.deleteUser(1);
-        scene = new Scene(loadFXML("Login").load());
-        stage.setScene(scene);
-        stage.show();
+        newSimpleWindow("Login", "Login");
     }
 
     public static void setRoot(String fxml) throws IOException {
@@ -58,20 +37,43 @@ public class App extends Application {
         return fxmlLoader;
     }
 
-    public static void newWindow(String title, String view, Map dataMap) throws IOException {
-        FXMLLoader loader = loadFXML(view);
-        Stage stage = new Stage();
-        stage.setTitle(title);
-        //Display window and wait for it to be closed before returning
-        stage.setScene(
-                new Scene(
-                        (Pane) loader.load()
-                )
-        );
-        DataController controller = loader.<DataController>getController();
+    public static void newSimpleWindow(String title, String view) {
+        try {
+            FXMLLoader loader = loadFXML(view);
+            Stage stage = new Stage();
+            stage.setTitle(title);
+            //Display window and wait for it to be closed before returning
+            stage.setScene(
+                    new Scene(
+                            (Pane) loader.load()
+                    )
+            );
+            stage.show();
+        } catch (IOException e) {
+            System.out.println("Error Creating Simple Window");
+            System.out.println("Error: "+ e);
+        }
+    }
 
-        controller.initData(dataMap);
-        stage.show();
+    public static void newDataWindow(String title, String view, Map dataMap) {
+        try {
+            FXMLLoader loader = loadFXML(view);
+            Stage stage = new Stage();
+            stage.setTitle(title);
+            //Display window and wait for it to be closed before returning
+            stage.setScene(
+                    new Scene(
+                            (Pane) loader.load()
+                    )
+            );
+            DataController controller = loader.<DataController>getController();
+
+            controller.initData(dataMap);
+            stage.show();
+        } catch (IOException e) {
+            System.out.println("Error Creating Data Window");
+            System.out.println("Error: "+ e);
+        }
     }
 
         // TODO: must rename this later

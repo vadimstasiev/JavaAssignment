@@ -2,14 +2,8 @@ package com.eva.controller;
 
 import com.eva.App;
 import java.io.IOException;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.SQLTimeoutException;
-import java.text.ParseException;
 import java.util.Map;
-import java.util.stream.StreamSupport;
 
-import com.eva.helpers.DatabaseInterface;
 import com.eva.helpers.Password;
 import com.eva.model.User;
 import com.mysql.cj.jdbc.exceptions.CommunicationsException;
@@ -67,7 +61,7 @@ public class Login {
                             // launch FullRegister
                             Map dataMap = User.getUserData(user_id_int);
                             if(dataMap.get("first_name")!=""&&dataMap.get("last_name")!="") { // checks if is fully registered
-                                App.newWindow("Complete Register","FullRegister", dataMap);
+                                App.newDataWindow("Complete Register","FullRegister", dataMap);
                             } else {
                                 App.AlertBox("Temporary Main menu replacement", "You're fully registered, good job!", "SuccessAlertBox");
                             }
