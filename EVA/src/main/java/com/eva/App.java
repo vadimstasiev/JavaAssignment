@@ -23,7 +23,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        newSimpleWindow("Login", "Home");
+        newSimpleWindow("Login", "Login");
     }
 
     public static FXMLLoader loadFXML(String fxml) {
