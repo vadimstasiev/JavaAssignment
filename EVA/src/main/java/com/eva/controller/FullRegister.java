@@ -14,6 +14,7 @@ import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.SQLIntegrityConstraintViolationException;
+import java.time.LocalDate;
 import java.util.Map;
 
 public class FullRegister extends DataController {
@@ -27,7 +28,8 @@ public class FullRegister extends DataController {
             town.setText((String)dataMap.get("town"));
             county.setText((String)dataMap.get("county"));
             postcode.setText((String)dataMap.get("postcode"));
-//            dob.setText((String)dataMap.get("dob"));
+            LocalDate date = LocalDate.parse((String)dataMap.get("dob"));
+            dob.setValue(date);
         }
     }
     @FXML

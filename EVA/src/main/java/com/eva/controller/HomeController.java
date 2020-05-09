@@ -50,7 +50,6 @@ public class HomeController extends DataController {
     {
         pnl_scroll.getChildren().clear();
         try {
-            System.out.println((String)dataMap.get("hashed_password"));
             Node node = (Node) App.loadFXML("Item").load();
             pnl_scroll.getChildren().add(node);
 
