@@ -59,10 +59,10 @@ public class FullRegister extends DataController {
             show_error("Please enter your date of birth");
         } else {
             try {
-                System.out.println("Fucks up right here");
                 System.out.println(dataMap.get("id"));
                 System.out.println(dataMap.get("hashed_password"));
-                int user_id_int = (Integer) dataMap.get("id");
+                int user_id_int = Integer.parseInt(dataMap.get("id").toString());
+                System.out.println("Fucks up right here");
                 User.deleteUser(user_id_int);
                 User.createUser(
                         user_id_int,
@@ -78,13 +78,13 @@ public class FullRegister extends DataController {
                         (String)dataMap.get("hashed_password")
                 );
                 App.AlertBox("Success", "You have successfully registered, now please log in.", "SuccessAlertBox");
-                App.setRoot("Login");
+                close();
             } catch (NumberFormatException e){
                 App.AlertBox("Error", "Error parsing the user ID.", "ErrorAlertBox");
             } catch(CommunicationsException e) {
                 App.AlertBox("Error", "Error connecting to the database.", "ErrorAlertBox");
             } catch(SQLIntegrityConstraintViolationException e) {
-                App.AlertBox("Error", "Account already exists.", "ErrorAlertBox");
+                App.AlertBox("Error", "Error updating account already exists.", "ErrorAlertBox");
             }
         }
     }
