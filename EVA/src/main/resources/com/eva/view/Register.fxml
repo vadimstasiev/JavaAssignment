@@ -5,6 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <VBox fx:id="window" alignment="CENTER" minHeight="700.0" minWidth="300.0" spacing="20.0" style="-fx-min-height: 400; -fx-min-width: 250;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eva.controller.Register">
     <children>
       <TextField maxHeight="0.0" maxWidth="0.0" minHeight="0.0" minWidth="0.0" opacity="0.0" prefHeight="0.0" prefWidth="0.0" />
@@ -33,11 +34,11 @@
          </font>
       </PasswordField>
         <Separator prefWidth="200.0" />
-        <Button contentDisplay="CENTER" layoutY="307.0" mnemonicParsing="false" onAction="#register" prefHeight="60.0" prefWidth="360.0" text="Register" textAlignment="CENTER">
+        <JFXButton onAction="#register" text="Register" layoutX="1041.0" layoutY="95.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="30.0" prefWidth="163.0" ripplerFill="WHITE" style="-fx-background-color: #473E98;" textFill="WHITE">
             <font>
                 <Font name="Bauhaus 93" size="24.0" />
             </font>
-        </Button>
+        </JFXButton>
         <Hyperlink onAction="#switchToLogin" text="Already have an account? Click to Login">
             <font>
                 <Font size="19.0" />

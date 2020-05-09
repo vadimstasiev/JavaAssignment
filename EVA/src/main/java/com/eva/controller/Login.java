@@ -17,7 +17,7 @@ import javafx.stage.Stage;
 public class Login {
 
     @FXML
-    public void switchToRegister(ActionEvent actionEvent) throws IOException {
+    public void switchToRegister(ActionEvent actionEvent) {
         App.newSimpleWindow("Register", "Register");
         close();
     }
@@ -38,7 +38,7 @@ public class Login {
     @FXML
     private TextField password;
     @FXML
-    public void login(ActionEvent actionEvent) throws IOException {
+    public void login() {
         int user_id_int = 0;
         hide_error();
         // user ID validation
@@ -55,14 +55,12 @@ public class Login {
                     show_error("Please enter your password");
                 } else {
                     String hashed_password = User.getUserHashedPassword(user_id_int);
-                    if (hashed_password=="") {
+                    if (hashed_password==null) {
                         show_error("Account Does Not Exist");
                     } else {
                         if (Password.checkPassword(password.getText(), hashed_password)) {
                             // launch FullRegister
                             Map dataMap = User.getUserData(user_id_int);
-                            System.out.println("dataMap.get(first_name).toString()");
-                            System.out.println(dataMap.get("first_name").toString());
                             if(dataMap.get("first_name").toString().equals("")&&dataMap.get("last_name").toString().equals("")) { // checks if is fully registered
                                 App.newDataWindow("Complete Register","FullRegister", dataMap);
                             } else {

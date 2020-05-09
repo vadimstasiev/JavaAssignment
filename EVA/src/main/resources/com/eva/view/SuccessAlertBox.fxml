@@ -5,6 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <VBox alignment="CENTER" prefHeight="221.0" prefWidth="466.0" spacing="20.0" style="-fx-min-height: 200; -fx-min-width: 250;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eva.controller.AlertBox">
    <children>
       <Label fx:id="errorLabel" minHeight="60.0" text="Success message here" textAlignment="CENTER" textFill="#009405" wrapText="true">
@@ -14,11 +15,11 @@
       <Separator prefWidth="200.0" />
       <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Button fx:id="closeButton" contentDisplay="CENTER" maxWidth="150.0" mnemonicParsing="false" onAction="#switchToLogin" prefHeight="50.0" prefWidth="360.0" text="OK" textAlignment="CENTER">
+            <JFXButton fx:id="closeButton" onAction="#switchToLogin" text="OK" layoutX="1041.0" layoutY="95.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="30.0" prefWidth="163.0" ripplerFill="WHITE" style="-fx-background-color: #473E98;" textFill="WHITE">
                <font>
                   <Font name="Bauhaus 93" size="24.0" />
                </font>
-            </Button>
+            </JFXButton>
          </children>
       </HBox>
    </children>

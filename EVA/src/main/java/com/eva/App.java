@@ -78,24 +78,6 @@ public class App extends Application {
         }
     }
 
-//    public static void newEmbeddableWindow(String view) {
-//        try {
-//            FXMLLoader loader = loadFXML(view);
-//            Stage stage = new Stage();
-//            //Display window and wait for it to be closed before returning
-//            stage.setScene(
-//                    new Scene(
-//                            (Pane) loader.load()
-//                    )
-//            );
-//            stage.show();
-//        } catch (IOException e) {
-//            System.out.println("Error Creating Simple Window");
-//            System.out.println("Error: "+ e);
-//        }
-//    }
-
-
     public static void AlertBox(String title, String message, String view) {
         FXMLLoader loader = loadFXML(view);
         Stage modalStage = new Stage();

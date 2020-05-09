@@ -28,23 +28,32 @@ public class User {
            String dob,
            Boolean isOrganizer,
            String hashed_password
-    ) throws SQLException {
-            String query = "INSERT INTO `users` " +
-                    "(`id`, `first_name`, `last_name`, `gender`, `address_line`, `town`, " +
-                    "`county`, `postcode`, `dob`, `isOrganizer`, `hashed_password`)" +
-                    " VALUES " +
-                    "('" + id +
-                    "', '" + first_name +
-                    "', '" + last_name +
-                    "', '" + gender +
-                    "', '" + address_line +
-                    "', '" + town +
-                    "', '" + county +
-                    "', '" + postcode +
-                    "', '" + dob +
-                    "', '" + (isOrganizer ? 1 : 0) +
-                    "', '" + hashed_password +"');";
-        DatabaseInterface.dbExecuteUpdate(query);
+    ) throws CommunicationsException, SQLIntegrityConstraintViolationException {
+        String query = "INSERT INTO `users` " +
+                "(`id`, `first_name`, `last_name`, `gender`, `address_line`, `town`, " +
+                "`county`, `postcode`, `dob`, `isOrganizer`, `hashed_password`)" +
+                " VALUES " +
+                "('" + id +
+                "', '" + first_name +
+                "', '" + last_name +
+                "', '" + gender +
+                "', '" + address_line +
+                "', '" + town +
+                "', '" + county +
+                "', '" + postcode +
+                "', '" + dob +
+                "', '" + (isOrganizer ? 1 : 0) +
+                "', '" + hashed_password +"');";
+        try {
+            DatabaseInterface.dbExecuteUpdate(query);
+        } catch (CommunicationsException | SQLIntegrityConstraintViolationException e) {
+            throw e;
+        } catch (SQLException e) {
+            System.out.println("Error in executing the following query: ");
+            System.out.println(query);
+            System.out.println("Error: " + e);
+        }
+
     }
     public static String getUserHashedPassword(int _id) throws CommunicationsException {
         Map dataMap = new HashMap();
@@ -57,7 +66,7 @@ public class User {
             System.out.println("Error in getUserHashedPassword() in User ");
             System.out.println("Error: " + e);
         }
-        return dataMap.get("hashed_password").toString();
+        return (String)dataMap.get("hashed_password");
     }
     public static Map getUserData(int _id) throws CommunicationsException {
         Map dataMap = new HashMap();

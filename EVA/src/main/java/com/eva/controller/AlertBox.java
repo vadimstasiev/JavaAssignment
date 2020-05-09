@@ -1,18 +1,16 @@
 package com.eva.controller;
 
-import com.eva.App;
+import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.ToggleButton;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class AlertBox {
     @FXML
-    Button closeButton;
+    JFXButton closeButton;
 
     @FXML
     public void switchToLogin(ActionEvent actionEvent) throws IOException {

@@ -46,7 +46,7 @@ public class Register {
     @FXML
     private TextField confirm_password;
     @FXML
-    public void register(ActionEvent actionEvent) throws IOException, SQLException {
+    public void register() {
         int user_id_int = 0;
         hide_error();
         // password validation
