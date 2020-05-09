@@ -20,17 +20,17 @@ import java.util.Map;
 public class FullRegister extends DataController {
     public void initData(Map data) {
         super.initData(data); // dataMap = data
-        if(first_name.getText().equals("") || last_name.getText().equals("")) {
-            first_name.setText((String)dataMap.get("first_name"));
-            last_name.setText((String)dataMap.get("last_name"));
-            gender.setValue((String)dataMap.get("gender"));
-            address_line.setText((String)dataMap.get("address_line"));
-            town.setText((String)dataMap.get("town"));
-            county.setText((String)dataMap.get("county"));
-            postcode.setText((String)dataMap.get("postcode"));
+        first_name.setText((String)dataMap.get("first_name"));
+        last_name.setText((String)dataMap.get("last_name"));
+        gender.setValue((String)dataMap.get("gender"));
+        address_line.setText((String)dataMap.get("address_line"));
+        town.setText((String)dataMap.get("town"));
+        county.setText((String)dataMap.get("county"));
+        postcode.setText((String)dataMap.get("postcode"));
+        try {
             LocalDate date = LocalDate.parse((String)dataMap.get("dob"));
             dob.setValue(date);
-        }
+        } catch (Exception e) { }
     }
     @FXML
     public TextField first_name;
