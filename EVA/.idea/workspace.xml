@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9af80d04-4b3c-4ff7-a54e-64966ce98a40" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/eva/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eva/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/eva/PrimaryController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/eva/SecondaryController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/eva/controller/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eva/controller/Register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/eva/helpers/DatabaseInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eva/helpers/DatabaseInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/eva/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eva/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/eva/view/secondary.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Learning_Resources/phpMyAdmin/Export.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Learning_Resources/phpMyAdmin/Export.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Learning_Resources/phpMyAdmin/Import.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Learning_Resources/phpMyAdmin/Import.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
