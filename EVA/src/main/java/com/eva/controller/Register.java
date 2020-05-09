@@ -56,12 +56,8 @@ public class Register {
         if(user_id.getText()=="") {
             show_error("Please enter your user ID");
         } else {
-            try {
-                // attempt to convert the user_id to int to verify it is an integer
-                user_id_int = Integer.parseInt(user_id.getText().trim());
-            } catch (Exception error) {
-                show_error("Please enter an integer value");
-            }
+            // attempt to convert the user_id to int to verify it is an integer
+            user_id_int = Integer.parseInt(user_id.getText().trim());
         }
         if(error.getText()=="") {
             try {
@@ -80,6 +76,8 @@ public class Register {
                 );
                 App.AlertBox("Success", "You have successfully registered, now please log in.", "SuccessAlertBox");
                 App.setRoot("Login");
+            } catch (NumberFormatException e){
+                show_error("Please enter an integer value");
             } catch(CommunicationsException e) {
                 App.AlertBox("Error", "Error connecting to the database.", "ErrorAlertBox");
             } catch(SQLIntegrityConstraintViolationException e) {

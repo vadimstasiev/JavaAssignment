@@ -92,9 +92,7 @@ public class User {
         return dataArray;
     }
     public static void deleteUser(int _id) throws SQLException {
-        DatabaseInterface.getData();
         String query = "DELETE FROM users WHERE id = " + _id;
         DatabaseInterface.dbExecuteUpdate(query);
-        DatabaseInterface.getData();
     }
 }

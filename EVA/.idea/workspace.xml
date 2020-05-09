@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="9af80d04-4b3c-4ff7-a54e-64966ce98a40" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/eva/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eva/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/eva/controller/FullRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eva/controller/FullRegister.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/eva/controller/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eva/controller/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eva/controller/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eva/controller/Register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eva/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eva/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/eva/view/FullRegister.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/eva/view/FullRegister.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,22 +75,22 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1431" height="95" key="GridCell.Tab.0.bottom" timestamp="1588976982079">
+    <state width="1431" height="233" key="GridCell.Tab.0.bottom" timestamp="1588983114066">
       <screen x="0" y="0" width="1474" height="864" />
     </state>
-    <state width="1431" height="95" key="GridCell.Tab.0.bottom/0.0.1474.864@0.0.1474.864" timestamp="1588976982079" />
-    <state width="1431" height="95" key="GridCell.Tab.0.center" timestamp="1588976982079">
+    <state width="1431" height="233" key="GridCell.Tab.0.bottom/0.0.1474.864@0.0.1474.864" timestamp="1588983114066" />
+    <state width="1431" height="233" key="GridCell.Tab.0.center" timestamp="1588983114066">
       <screen x="0" y="0" width="1474" height="864" />
     </state>
-    <state width="1431" height="95" key="GridCell.Tab.0.center/0.0.1474.864@0.0.1474.864" timestamp="1588976982079" />
-    <state width="1431" height="95" key="GridCell.Tab.0.left" timestamp="1588976982079">
+    <state width="1431" height="233" key="GridCell.Tab.0.center/0.0.1474.864@0.0.1474.864" timestamp="1588983114066" />
+    <state width="1431" height="233" key="GridCell.Tab.0.left" timestamp="1588983114066">
       <screen x="0" y="0" width="1474" height="864" />
     </state>
-    <state width="1431" height="95" key="GridCell.Tab.0.left/0.0.1474.864@0.0.1474.864" timestamp="1588976982079" />
-    <state width="1431" height="95" key="GridCell.Tab.0.right" timestamp="1588976982079">
+    <state width="1431" height="233" key="GridCell.Tab.0.left/0.0.1474.864@0.0.1474.864" timestamp="1588983114066" />
+    <state width="1431" height="233" key="GridCell.Tab.0.right" timestamp="1588983114066">
       <screen x="0" y="0" width="1474" height="864" />
     </state>
-    <state width="1431" height="95" key="GridCell.Tab.0.right/0.0.1474.864@0.0.1474.864" timestamp="1588976982079" />
+    <state width="1431" height="233" key="GridCell.Tab.0.right/0.0.1474.864@0.0.1474.864" timestamp="1588983114066" />
     <state x="434" y="256" key="com.intellij.ide.util.TipDialog" timestamp="1588975040457">
       <screen x="0" y="0" width="1474" height="864" />
     </state>

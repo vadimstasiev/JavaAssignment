@@ -16,11 +16,11 @@ import java.sql.SQLException;
 import java.sql.SQLIntegrityConstraintViolationException;
 
 public class FullRegister extends DataController {
-    public void updateDetails(ActionEvent actionEvent) {
-        System.out.println("Full Register Here");
-        System.out.println("password: " + dataMap.get("hashed_password"));
-
-    }
+//    public void updateDetails(ActionEvent actionEvent) {
+//        System.out.println("Full Register Here");
+//        System.out.println("password: " + dataMap.get("hashed_password"));
+//
+//    }
     @FXML
     public TextField first_name;
     @FXML
@@ -34,51 +34,60 @@ public class FullRegister extends DataController {
     @FXML
     public TextField county;
     @FXML
-    public TextField dob;
-//    public void updateDetails1(ActionEvent actionEvent) throws IOException, SQLException {
-//        int user_id_int = 0;
-//        hide_error();
-//        // password validation
-//        if(password.getText().equals("") || confirm_password.getText().equals("")) {
-//            show_error("Please enter and confirm your password");
-//        } else if(!password.getText().equals(confirm_password.getText())) {
-//            show_error("Please enter the same password on both fields");
-//        }
-//        // user ID validation
-//        if(user_id.getText()=="") {
-//            show_error("Please enter your user ID");
-//        } else {
-//            try {
-//                // attempt to convert the user_id to int to verify it is an integer
-//                user_id_int = Integer.parseInt(user_id.getText().trim());
-//            } catch (Exception error) {
-//                show_error("Please enter an integer value");
-//            }
-//        }
-//        if(error.getText()=="") {
-//            try {
-//                User.createUser(
-//                        user_id_int,
-//                        "",
-//                        "",
-//                        "",
-//                        "",
-//                        "",
-//                        "",
-//                        "",
-//                        "",
-//                        false,
-//                        Password.encryptPassword(password.getText())
-//                );
-//                App.AlertBox("Success", "You have successfully registered, now please log in.", "SuccessAlertBox");
-//                App.setRoot("Login");
-//            } catch(CommunicationsException e) {
-//                App.AlertBox("Error", "Error connecting to the database.", "ErrorAlertBox");
-//            } catch(SQLIntegrityConstraintViolationException e) {
-//                App.AlertBox("Error", "Account already exists.", "ErrorAlertBox");
-//            }
-//        }
-//    }
+    public TextField postcode;
+    @FXML
+    public DatePicker dob;
+    public void updateDetails(ActionEvent actionEvent) throws IOException, SQLException {
+        hide_error();
+        // password validation
+        if(first_name.getText().equals("") || last_name.getText().equals("")) {
+            show_error("Please enter your first and last name");
+        } else if (!(
+            gender.getValue().equals("Female") ||
+            gender.getValue().equals("Male") ||
+            gender.getValue().equals("Other")
+        )) {
+            show_error("Please select a gender");
+        } else if (
+            address_line.getText().equals("") ||
+            town.getText().equals("") ||
+            county.getText().equals("") ||
+            postcode.getText().equals("")
+        ) {
+            show_error("Please enter your full address");
+        } else if (dob.getValue()==null) {
+            show_error("Please enter your date of birth");
+        } else {
+            try {
+                System.out.println("Fucks up right here");
+                System.out.println(dataMap.get("id"));
+                System.out.println(dataMap.get("hashed_password"));
+                int user_id_int = (Integer) dataMap.get("id");
+                User.deleteUser(user_id_int);
+                User.createUser(
+                        user_id_int,
+                        first_name.getText(),
+                        last_name.getText(),
+                        gender.getValue(),
+                        address_line.getText(),
+                        town.getText(),
+                        county.getText(),
+                        postcode.getText(),
+                        dob.getValue().toString(),
+                        false,
+                        (String)dataMap.get("hashed_password")
+                );
+                App.AlertBox("Success", "You have successfully registered, now please log in.", "SuccessAlertBox");
+                App.setRoot("Login");
+            } catch (NumberFormatException e){
+                App.AlertBox("Error", "Error parsing the user ID.", "ErrorAlertBox");
+            } catch(CommunicationsException e) {
+                App.AlertBox("Error", "Error connecting to the database.", "ErrorAlertBox");
+            } catch(SQLIntegrityConstraintViolationException e) {
+                App.AlertBox("Error", "Account already exists.", "ErrorAlertBox");
+            }
+        }
+    }
     @FXML
     private Label error;
     private void show_error(String message) {

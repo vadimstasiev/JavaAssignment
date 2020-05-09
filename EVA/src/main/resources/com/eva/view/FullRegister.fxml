@@ -91,8 +91,8 @@
             <TextField fx:id="address_line" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <TextField fx:id="town" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <TextField fx:id="county" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-            <TextField fx:id="dob" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-            <DatePicker editable="false" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <TextField fx:id="postcode" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <DatePicker fx:id="dob" editable="false" promptText="Please Select" showWeekNumbers="true" GridPane.columnIndex="1" GridPane.rowIndex="7" />
          </children>
       <padding>
          <Insets left="20.0" right="20.0" />
@@ -106,7 +106,7 @@
                         <Font name="Bauhaus 93" size="24.0" />
                     </font>
                 </Button>
-                <Button onAction="#logout" contentDisplay="CENTER" layoutY="307.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="360.0" text="Logout" textAlignment="CENTER">
+                <Button contentDisplay="CENTER" layoutY="307.0" mnemonicParsing="false" onAction="#logout" prefHeight="60.0" prefWidth="360.0" text="Logout" textAlignment="CENTER">
                     <font>
                         <Font name="Bauhaus 93" size="24.0" />
                     </font>
