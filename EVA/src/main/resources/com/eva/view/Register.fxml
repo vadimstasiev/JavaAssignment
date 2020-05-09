@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" minHeight="700.0" minWidth="300.0" spacing="20.0" style="-fx-min-height: 400; -fx-min-width: 250;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eva.controller.Register">
+<VBox fx:id="window" alignment="CENTER" minHeight="700.0" minWidth="300.0" spacing="20.0" style="-fx-min-height: 400; -fx-min-width: 250;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eva.controller.Register">
     <children>
       <TextField maxHeight="0.0" maxWidth="0.0" minHeight="0.0" minWidth="0.0" opacity="0.0" prefHeight="0.0" prefWidth="0.0" />
         <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="166.0" prefWidth="360.0" text="EVA" textAlignment="JUSTIFY">

@@ -17,12 +17,15 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
 public class Register {
     // Link to Login
     @FXML
     public void switchToLogin(ActionEvent actionEvent) throws IOException {
-        App.setRoot("Login");
+        App.newSimpleWindow("Login", "Login");
+        close();
     }
 
     @FXML
@@ -84,6 +87,12 @@ public class Register {
                 App.AlertBox("Error", "Account already exists.", "ErrorAlertBox");
             }
         }
+    }
+    @FXML
+    VBox window;
+    public void close(){
+        Stage stage = (Stage) window.getScene().getWindow();
+        stage.close();
     }
 }
 

@@ -18,7 +18,8 @@ public class Login {
 
     @FXML
     public void switchToRegister(ActionEvent actionEvent) throws IOException {
-        App.setRoot("Register");
+        App.newSimpleWindow("Register", "Register");
+        close();
     }
 
     @FXML
