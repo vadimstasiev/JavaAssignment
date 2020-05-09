@@ -5,13 +5,14 @@
  */
 package com.eva.controller;
 
-import com.eva.App;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import com.eva.App;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -49,20 +50,14 @@ public class HomeController implements Initializable {
     private void refreshNodes()
     {
         pnl_scroll.getChildren().clear();
-        
-        Node [] nodes = new  Node[15];
-        
-        for(int i = 0; i<10; i++)
-        {
-            try {
-                nodes[i] = (Node)FXMLLoader.load(getClass().getResource("view/Item.fxml"));
-               pnl_scroll.getChildren().add(nodes[i]);
-                
-            } catch (IOException ex) {
-                Logger.getLogger(HomeController.class.getName()).log(Level.SEVERE, null, ex);
-            }
-           
-        }  
+        try {
+            Node node = (Node) App.loadFXML("Item").load();
+            pnl_scroll.getChildren().add(node);
+
+        } catch (IOException e) {
+            Logger.getLogger(HomeController.class.getName()).log(Level.SEVERE, null, e);
+            App.AlertBox("Error", "Error loading view.", "ErrorAlertBox");
+        }
     }
     
 }

@@ -23,13 +23,19 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        newSimpleWindow("Login", "Login");
+        newSimpleWindow("Login", "Home");
     }
 
-    private static FXMLLoader loadFXML(String fxml) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(
+    public static FXMLLoader loadFXML(String fxml) {
+        FXMLLoader fxmlLoader = null;
+        try {
+            fxmlLoader = new FXMLLoader(
                 App.class.getResource("view/" + fxml + ".fxml")
-        );
+            );
+        } catch (Exception e) {
+            System.out.println("Error loading FXML");
+            System.out.println("Error: " + e);
+        }
         return fxmlLoader;
     }
 
@@ -72,18 +78,41 @@ public class App extends Application {
         }
     }
 
-    public static void AlertBox(String title, String message, String view) throws IOException {
+//    public static void newEmbeddableWindow(String view) {
+//        try {
+//            FXMLLoader loader = loadFXML(view);
+//            Stage stage = new Stage();
+//            //Display window and wait for it to be closed before returning
+//            stage.setScene(
+//                    new Scene(
+//                            (Pane) loader.load()
+//                    )
+//            );
+//            stage.show();
+//        } catch (IOException e) {
+//            System.out.println("Error Creating Simple Window");
+//            System.out.println("Error: "+ e);
+//        }
+//    }
+
+
+    public static void AlertBox(String title, String message, String view) {
         FXMLLoader loader = loadFXML(view);
         Stage modalStage = new Stage();
         //Block events to other windows
         modalStage.initModality(Modality.APPLICATION_MODAL);
         modalStage.setTitle(title);
         //Display window and wait for it to be closed before returning
-        modalStage.setScene(
-                new Scene(
-                        (Pane) loader.load()
-                )
-        );
+        try {
+            modalStage.setScene(
+                    new Scene(
+                            (Pane) loader.load()
+                    )
+            );
+        } catch (IOException e) {
+            System.out.println("Error Creating Scene");
+            System.out.println("Error: "+ e);
+        }
         AlertBox controller = loader.<AlertBox>getController();
         controller.initData(message);
         modalStage.showAndWait();
