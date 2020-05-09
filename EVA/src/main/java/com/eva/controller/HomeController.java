@@ -13,6 +13,7 @@ import java.util.logging.Logger;
 import com.eva.App;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
@@ -34,28 +35,29 @@ public class HomeController extends DataController {
     private VBox pnl_scroll;
     
     @FXML
-    private void handleButtonAction(MouseEvent event) {        
-       refreshNodes();
+    private void handleButtonAction() {
+        loadView("Item");
     }
 
     public void initData(Map data) {
         super.initData(data); // dataMap = data
-        System.out.println((String)dataMap.get("hashed_password"));
-        full_name.setText(((String) dataMap.get("first_name")) + " " + ((String) dataMap.get("last_name")));
-        id_number.setText("User ID: " + ((String) dataMap.get("id")));
-        refreshNodes();
+        full_name.setText(dataMap.get("first_name") + " " +  dataMap.get("last_name"));
+        id_number.setText("User ID: " +  dataMap.get("id"));
+        loadView("Item");
     }
     
-    private void refreshNodes()
+    private void loadView(String view)
     {
         pnl_scroll.getChildren().clear();
         try {
-            Node node = (Node) App.loadFXML("Item").load();
+            FXMLLoader loader = App.loadFXML(view);
+            Node node = (Node) loader.load();
             pnl_scroll.getChildren().add(node);
-
+            DataController controller = loader.<DataController>getController();
+            controller.initData(dataMap);
         } catch (IOException e) {
-            Logger.getLogger(HomeController.class.getName()).log(Level.SEVERE, null, e);
             App.AlertBox("Error", "Error loading view.", "ErrorAlertBox");
+            Logger.getLogger(HomeController.class.getName()).log(Level.SEVERE, null, e);
         }
     }
 
