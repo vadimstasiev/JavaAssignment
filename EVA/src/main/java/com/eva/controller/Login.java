@@ -61,7 +61,9 @@ public class Login {
                         if (Password.checkPassword(password.getText(), hashed_password)) {
                             // launch FullRegister
                             Map dataMap = User.getUserData(user_id_int);
-                            if(dataMap.get("first_name")!=""&&dataMap.get("last_name")!="") { // checks if is fully registered
+                            System.out.println("dataMap.get(first_name).toString()");
+                            System.out.println(dataMap.get("first_name").toString());
+                            if(dataMap.get("first_name").toString().equals("")&&dataMap.get("last_name").toString().equals("")) { // checks if is fully registered
                                 App.newDataWindow("Complete Register","FullRegister", dataMap);
                             } else {
                                 App.AlertBox("Temporary Main menu replacement", "You're fully registered, good job!", "SuccessAlertBox");

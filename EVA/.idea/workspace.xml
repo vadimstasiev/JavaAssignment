@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9af80d04-4b3c-4ff7-a54e-64966ce98a40" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Learning_Resources/phpMyAdmin/Export.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Learning_Resources/phpMyAdmin/Export.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learning_Resources/phpMyAdmin/Import.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Learning_Resources/phpMyAdmin/Import.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eva/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eva/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eva/controller/DataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eva/controller/DataController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eva/controller/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eva/controller/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eva/helpers/DatabaseInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eva/helpers/DatabaseInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/eva/view/Home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/eva/view/Home23.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/eva/view/Item.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/eva/view/Item.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +26,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1bdd20kDA0LUNnJWI7N0bMv6tRJ" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -72,34 +80,38 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="734" y="249" key="#com.intellij.ide.util.MemberChooser" timestamp="1589044019742">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state x="734" y="249" key="#com.intellij.ide.util.MemberChooser/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1589044019742" />
     <state x="659" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1589038920038">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="659" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1589038920038" />
-    <state width="1815" height="295" key="GridCell.Tab.0.bottom" timestamp="1589038935226">
+    <state width="1815" height="295" key="GridCell.Tab.0.bottom" timestamp="1589045056598">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state width="1431" height="233" key="GridCell.Tab.0.bottom/0.0.1474.864@0.0.1474.864" timestamp="1588983114066" />
-    <state width="1815" height="295" key="GridCell.Tab.0.bottom/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1589038935226" />
-    <state width="1815" height="295" key="GridCell.Tab.0.center" timestamp="1589038935225">
+    <state width="1815" height="295" key="GridCell.Tab.0.bottom/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1589045056598" />
+    <state width="1815" height="295" key="GridCell.Tab.0.center" timestamp="1589045056598">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state width="1431" height="233" key="GridCell.Tab.0.center/0.0.1474.864@0.0.1474.864" timestamp="1588983114066" />
-    <state width="1815" height="295" key="GridCell.Tab.0.center/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1589038935225" />
-    <state width="1815" height="295" key="GridCell.Tab.0.left" timestamp="1589038935225">
+    <state width="1815" height="295" key="GridCell.Tab.0.center/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1589045056598" />
+    <state width="1815" height="295" key="GridCell.Tab.0.left" timestamp="1589045056598">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state width="1431" height="233" key="GridCell.Tab.0.left/0.0.1474.864@0.0.1474.864" timestamp="1588983114066" />
-    <state width="1815" height="295" key="GridCell.Tab.0.left/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1589038935225" />
-    <state width="1815" height="295" key="GridCell.Tab.0.right" timestamp="1589038935225">
+    <state width="1815" height="295" key="GridCell.Tab.0.left/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1589045056598" />
+    <state width="1815" height="295" key="GridCell.Tab.0.right" timestamp="1589045056598">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state width="1431" height="233" key="GridCell.Tab.0.right/0.0.1474.864@0.0.1474.864" timestamp="1588983114066" />
-    <state width="1815" height="295" key="GridCell.Tab.0.right/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1589038935225" />
-    <state x="547" y="320" key="com.intellij.ide.util.TipDialog" timestamp="1589017505047">
+    <state width="1815" height="295" key="GridCell.Tab.0.right/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1589045056598" />
+    <state x="547" y="320" key="com.intellij.ide.util.TipDialog" timestamp="1589040736928">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="434" y="256" key="com.intellij.ide.util.TipDialog/0.0.1474.864@0.0.1474.864" timestamp="1588975040457" />
-    <state x="547" y="320" key="com.intellij.ide.util.TipDialog/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1589017505047" />
+    <state x="547" y="320" key="com.intellij.ide.util.TipDialog/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1589040736928" />
   </component>
 </project>

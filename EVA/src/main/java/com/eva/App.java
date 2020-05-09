@@ -72,7 +72,6 @@ public class App extends Application {
         }
     }
 
-        // TODO: must rename this later
     public static void AlertBox(String title, String message, String view) throws IOException {
         FXMLLoader loader = loadFXML(view);
         Stage modalStage = new Stage();

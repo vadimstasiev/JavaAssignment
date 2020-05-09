@@ -24,6 +24,7 @@ public class DatabaseInterface {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(URL, USER, PASSWORD);
+            con.setAutoCommit(true);
             st = con.createStatement();
         } catch (CommunicationsException e) {
             System.out.println("Error: " + e);

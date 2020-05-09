@@ -1,0 +1,10 @@
+.jfx-tab-pane .tab:selected {
+    -fx-background-color: #f1f1f1; /* When this */
+}
+
+.jfx-tab-pane .tab-label {
+    -fx-text-fill: #000;
+    -fx-font-weight: normal; /* And this,
+                                are both used in style,
+                                they're causing this bug */
+}
