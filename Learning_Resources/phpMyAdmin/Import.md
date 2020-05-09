@@ -8,9 +8,3 @@
 ![](./img/6.png)
 
 ![](./img/7.png)
-
-# How to delete a database in phpMyAdmin 
-
-Click on your database, then go under `Operations` and scroll down to find `Drop the database`.
-
-![](./img/8.png)
