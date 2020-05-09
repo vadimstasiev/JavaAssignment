@@ -64,7 +64,7 @@ public class Login {
                             if(dataMap.get("first_name").toString().equals("")&&dataMap.get("last_name").toString().equals("")) { // checks if is fully registered
                                 App.newDataWindow("Complete Register","FullRegister", dataMap);
                             } else {
-                                App.AlertBox("Temporary Main menu replacement", "You're fully registered, good job!", "SuccessAlertBox");
+                                App.newDataWindow("Home","Home", dataMap);
                             }
                             close();
                         } else {

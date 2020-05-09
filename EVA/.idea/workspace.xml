@@ -3,15 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="9af80d04-4b3c-4ff7-a54e-64966ce98a40" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/eva/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eva/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/eva/controller/AlertBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eva/controller/AlertBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eva/controller/DataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eva/controller/DataController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eva/controller/FullRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eva/controller/FullRegister.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eva/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eva/controller/HomeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/eva/controller/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eva/controller/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/eva/controller/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eva/controller/Register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/eva/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eva/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/eva/view/ErrorAlertBox.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/eva/view/ErrorAlertBox.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/eva/view/FullRegister.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/eva/view/FullRegister.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/eva/view/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/eva/view/Login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/eva/view/Register.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/eva/view/Register.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/eva/view/Home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/eva/view/Home.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/eva/view/SuccessAlertBox.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/eva/view/SuccessAlertBox.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -96,34 +94,34 @@
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="659" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1589038920038" />
-    <state width="1815" height="295" key="GridCell.Tab.0.bottom" timestamp="1589051579531">
+    <state width="1815" height="295" key="GridCell.Tab.0.bottom" timestamp="1589057313702">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state width="1431" height="233" key="GridCell.Tab.0.bottom/0.0.1474.864@0.0.1474.864" timestamp="1588983114066" />
-    <state width="1815" height="295" key="GridCell.Tab.0.bottom/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1589051579531" />
-    <state width="1815" height="295" key="GridCell.Tab.0.center" timestamp="1589051579531">
+    <state width="1815" height="295" key="GridCell.Tab.0.bottom/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1589057313702" />
+    <state width="1815" height="295" key="GridCell.Tab.0.center" timestamp="1589057313702">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state width="1431" height="233" key="GridCell.Tab.0.center/0.0.1474.864@0.0.1474.864" timestamp="1588983114066" />
-    <state width="1815" height="295" key="GridCell.Tab.0.center/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1589051579531" />
-    <state width="1815" height="295" key="GridCell.Tab.0.left" timestamp="1589051579531">
+    <state width="1815" height="295" key="GridCell.Tab.0.center/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1589057313702" />
+    <state width="1815" height="295" key="GridCell.Tab.0.left" timestamp="1589057313702">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state width="1431" height="233" key="GridCell.Tab.0.left/0.0.1474.864@0.0.1474.864" timestamp="1588983114066" />
-    <state width="1815" height="295" key="GridCell.Tab.0.left/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1589051579531" />
-    <state width="1815" height="295" key="GridCell.Tab.0.right" timestamp="1589051579531">
+    <state width="1815" height="295" key="GridCell.Tab.0.left/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1589057313702" />
+    <state width="1815" height="295" key="GridCell.Tab.0.right" timestamp="1589057313702">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state width="1431" height="233" key="GridCell.Tab.0.right/0.0.1474.864@0.0.1474.864" timestamp="1588983114066" />
-    <state width="1815" height="295" key="GridCell.Tab.0.right/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1589051579531" />
+    <state width="1815" height="295" key="GridCell.Tab.0.right/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1589057313702" />
     <state x="547" y="320" key="com.intellij.ide.util.TipDialog" timestamp="1589040736928">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="434" y="256" key="com.intellij.ide.util.TipDialog/0.0.1474.864@0.0.1474.864" timestamp="1588975040457" />
     <state x="547" y="320" key="com.intellij.ide.util.TipDialog/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1589040736928" />
-    <state x="1951" y="-22" width="1585" height="744" maximized="true" key="dock-window-1" timestamp="1589049368840">
+    <state x="1997" y="-8" width="1585" height="744" maximized="true" key="dock-window-1" timestamp="1589055657998">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="1951" y="-22" width="1585" height="744" maximized="true" key="dock-window-1/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1589049368840" />
+    <state x="1997" y="-8" width="1585" height="744" maximized="true" key="dock-window-1/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1589055657998" />
   </component>
 </project>

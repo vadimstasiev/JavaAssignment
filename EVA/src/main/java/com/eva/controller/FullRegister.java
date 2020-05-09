@@ -14,13 +14,22 @@ import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.SQLIntegrityConstraintViolationException;
+import java.util.Map;
 
 public class FullRegister extends DataController {
-//    public void updateDetails(ActionEvent actionEvent) {
-//        System.out.println("Full Register Here");
-//        System.out.println("password: " + dataMap.get("hashed_password"));
-//
-//    }
+    public void initData(Map data) {
+        super.initData(data); // dataMap = data
+        if(first_name.getText().equals("") || last_name.getText().equals("")) {
+            first_name.setText((String)dataMap.get("first_name"));
+            last_name.setText((String)dataMap.get("last_name"));
+            gender.setValue((String)dataMap.get("gender"));
+            address_line.setText((String)dataMap.get("address_line"));
+            town.setText((String)dataMap.get("town"));
+            county.setText((String)dataMap.get("county"));
+            postcode.setText((String)dataMap.get("postcode"));
+//            dob.setText((String)dataMap.get("dob"));
+        }
+    }
     @FXML
     public TextField first_name;
     @FXML
@@ -62,7 +71,6 @@ public class FullRegister extends DataController {
                 System.out.println(dataMap.get("id"));
                 System.out.println(dataMap.get("hashed_password"));
                 int user_id_int = Integer.parseInt(dataMap.get("id").toString());
-                System.out.println("Fucks up right here");
                 User.deleteUser(user_id_int);
                 User.createUser(
                         user_id_int,
@@ -77,7 +85,8 @@ public class FullRegister extends DataController {
                         false,
                         (String)dataMap.get("hashed_password")
                 );
-                App.AlertBox("Success", "You have successfully registered, now please log in.", "SuccessAlertBox");
+                dataMap = User.getUserData(user_id_int);
+                App.newDataWindow("Home","Home", dataMap);
                 close();
             } catch (NumberFormatException e){
                 App.AlertBox("Error", "Error parsing the user ID.", "ErrorAlertBox");

@@ -21,9 +21,9 @@ public class AlertBox {
     }
 
     @FXML
-    Label errorLabel;
+    Label labelMessage;
 
     public void initData(String message) {
-        errorLabel.setText(message);
+        labelMessage.setText(message);
     }
 }
