@@ -1,2 +1,2 @@
 ## How to import the database
-Please check this [link](../../Learning_Resources/phpMyAdmin/README.md#how-to-import-mysql-into-phpmyadmin).
+Please check this [link](../../Learning_Resources/phpMyAdmin/README.md).
