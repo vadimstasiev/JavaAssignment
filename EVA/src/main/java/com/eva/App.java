@@ -26,10 +26,6 @@ public class App extends Application {
         newSimpleWindow("Login", "Login");
     }
 
-    public static void setRoot(String fxml) throws IOException {
-        scene.setRoot(loadFXML(fxml).load());
-    }
-
     private static FXMLLoader loadFXML(String fxml) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(
                 App.class.getResource("view/" + fxml + ".fxml")

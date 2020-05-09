@@ -47,49 +47,30 @@ public class User {
         DatabaseInterface.dbExecuteUpdate(query);
     }
     public static String getUserHashedPassword(int _id) throws CommunicationsException {
-        String hashed_password = "";
+        Map dataMap = new HashMap();
         String query = "SELECT hashed_password FROM users WHERE id = " + _id;
         try {
-            ResultSet res = DatabaseInterface.dbExecuteQuery(query);
-            while (res.next()) {
-                hashed_password = res.getString("hashed_password");
-            }
+            dataMap = DatabaseInterface.dbExecuteQuery(query);
         } catch (CommunicationsException e) {
             throw e;
         } catch (Exception e) {
             System.out.println("Error in getUserHashedPassword() in User ");
             System.out.println("Error: " + e);
         }
-        return hashed_password;
+        return dataMap.get("hashed_password").toString();
     }
     public static Map getUserData(int _id) throws CommunicationsException {
-
-
-        Map dataArray = new HashMap();
+        Map dataMap = new HashMap();
         String query = "SELECT * FROM users WHERE id = " + _id;
         try {
-            ResultSet res = DatabaseInterface.dbExecuteQuery(query);
-            ResultSetMetaData rsmd = res.getMetaData();
-            int columnCount = rsmd.getColumnCount();
-
-
-            while (res.next()) {
-                if(res.getString("hashed_password")!="") {
-                    int resSize = res.getFetchSize();
-                    for(int i=1;i<=columnCount;i++) {
-                        dataArray.put(rsmd.getColumnName(i), res.getString(i));
-                        //System.out.println("Column: "+ rsmd.getColumnName(i)+"  Value: "+ res.getString(i));
-                    }
-                }
-            }
-
+            dataMap = DatabaseInterface.dbExecuteQuery(query);
         } catch (CommunicationsException e) {
             throw e;
         } catch (Exception e) {
-            System.out.println("Error in getUserHashedPassword() in User ");
+            System.out.println("Error in getUserData() in User ");
             System.out.println("Error: " + e);
         }
-        return dataArray;
+        return dataMap;
     }
     public static void deleteUser(int _id) throws SQLException {
         String query = "DELETE FROM users WHERE id = " + _id;

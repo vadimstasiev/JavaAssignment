@@ -78,7 +78,8 @@ public class Register {
                         Password.encryptPassword(password.getText())
                 );
                 App.AlertBox("Success", "You have successfully registered, now please log in.", "SuccessAlertBox");
-                App.setRoot("Login");
+                App.newSimpleWindow("Login", "Login");
+                close();
             } catch (NumberFormatException e){
                 show_error("Please enter an integer value");
             } catch(CommunicationsException e) {
