@@ -7,11 +7,11 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" prefHeight="221.0" prefWidth="515.0" spacing="20.0" style="-fx-min-height: 200; -fx-min-width: 250;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eva.controller.AlertBox">
+<VBox fx:id="window" alignment="CENTER" prefHeight="221.0" prefWidth="515.0" spacing="20.0" style="-fx-min-height: 200; -fx-min-width: 250;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eva.controller.AlertBox">
    <children>
       <HBox alignment="CENTER" prefHeight="116.0" spacing="50.0">
          <children>
-            <ImageView fitHeight="77.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="46.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@images/error.png" />
                </image>
@@ -32,7 +32,7 @@
       <Separator prefWidth="200.0" />
       <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
          <children>
-            <JFXButton fx:id="closeButton" layoutX="1041.0" layoutY="95.0" nodeOrientation="RIGHT_TO_LEFT" onAction="#switchToLogin" prefHeight="30.0" prefWidth="163.0" ripplerFill="WHITE" style="-fx-background-color: #473E98;" text="OK" textFill="WHITE">
+            <JFXButton layoutX="1041.0" layoutY="95.0" nodeOrientation="RIGHT_TO_LEFT" onAction="#close" prefHeight="30.0" prefWidth="163.0" ripplerFill="WHITE" style="-fx-background-color: #473E98;" text="OK" textFill="WHITE">
                <font>
                   <Font name="Bauhaus 93" size="24.0" />
                </font>

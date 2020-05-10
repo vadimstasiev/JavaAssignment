@@ -121,13 +121,17 @@ public class FullRegister extends DataController {
         stage.close();
     }
     public void deleteProfile() {
-        int user_id_int = 0;
-        try {
-            user_id_int = Integer.parseInt(dataMap.get("id").toString());
-        } catch (NumberFormatException e){
-            App.AlertBox("Error", "Error parsing the user ID.", "ErrorAlertBox");
+        App.DialogReferenceAnswer referenceAnswer = new App.DialogReferenceAnswer();
+        App.DialogBox("Confirm", "Are you sure you want to delete?", "DialogBox", referenceAnswer);
+        if(referenceAnswer.answer.equals("Yes")){
+            int user_id_int = 0;
+            try {
+                user_id_int = Integer.parseInt(dataMap.get("id").toString());
+            } catch (NumberFormatException e){
+                App.AlertBox("Error", "Error parsing the user ID.", "ErrorAlertBox");
+            }
+            User.deleteUser(user_id_int);
+            logout();
         }
-        User.deleteUser(user_id_int);
-        logout();
     }
 }

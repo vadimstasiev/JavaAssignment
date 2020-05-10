@@ -1,22 +1,19 @@
 package com.eva.controller;
 
-import com.jfoenix.controls.JFXButton;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class AlertBox {
     @FXML
-    JFXButton closeButton;
+    VBox window;
 
     @FXML
-    public void switchToLogin(ActionEvent actionEvent) throws IOException {
-        // get a handle to the stage
-        Stage stage = (Stage) closeButton.getScene().getWindow();
-        // do what you have to do
+    public void close() {
+        Stage stage = (Stage) window.getScene().getWindow();
         stage.close();
     }
 

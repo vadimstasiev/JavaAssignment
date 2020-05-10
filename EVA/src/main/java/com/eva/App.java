@@ -3,6 +3,7 @@ package com.eva;
 import com.eva.controller.AlertBox;
 
 import com.eva.controller.DataController;
+import com.eva.controller.DialogBox;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -97,6 +98,31 @@ public class App extends Application {
         }
         AlertBox controller = loader.<AlertBox>getController();
         controller.initData(message);
+        modalStage.showAndWait();
+    }
+    public static class DialogReferenceAnswer {
+        public String answer = "";
+    }
+
+    public static void DialogBox(String title, String message, String view, DialogReferenceAnswer reference) {
+        FXMLLoader loader = loadFXML(view);
+        Stage modalStage = new Stage();
+        //Block events to other windows
+        modalStage.initModality(Modality.APPLICATION_MODAL);
+        modalStage.setTitle(title);
+        //Display window and wait for it to be closed before returning
+        try {
+            modalStage.setScene(
+                    new Scene(
+                            (Pane) loader.load()
+                    )
+            );
+        } catch (IOException e) {
+            System.out.println("Error Creating Scene");
+            System.out.println("Error: "+ e);
+        }
+        DialogBox controller = loader.<DialogBox>getController();
+        controller.initData(message, reference);
         modalStage.showAndWait();
     }
 
