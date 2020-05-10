@@ -81,8 +81,13 @@ public class User {
         }
         return dataMap;
     }
-    public static void deleteUser(int _id) throws SQLException {
+    public static void deleteUser(int _id) {
+        try {
         String query = "DELETE FROM users WHERE id = " + _id;
         DatabaseInterface.dbExecuteUpdate(query);
+        } catch (Exception e) {
+            System.out.println("Error in deleteUser() in User ");
+            System.out.println("Error: " + e);
+        }
     }
 }

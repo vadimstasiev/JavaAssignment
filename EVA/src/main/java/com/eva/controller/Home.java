@@ -25,7 +25,7 @@ import javafx.stage.Stage;
  *
  * @author oXCToo
  */
-public class HomeController extends DataController {
+public class Home extends DataController {
 
     @FXML
     public Label full_name;
@@ -57,7 +57,7 @@ public class HomeController extends DataController {
             controller.initData(dataMap);
         } catch (IOException e) {
             App.AlertBox("Error", "Error loading view.", "ErrorAlertBox");
-            Logger.getLogger(HomeController.class.getName()).log(Level.SEVERE, null, e);
+            Logger.getLogger(Home.class.getName()).log(Level.SEVERE, null, e);
         }
     }
 
@@ -71,5 +71,10 @@ public class HomeController extends DataController {
     public void close(){
         Stage stage = (Stage) window.getScene().getWindow();
         stage.close();
+    }
+
+    public void logout() {
+        App.newSimpleWindow("Login", "Login");
+        close();
     }
 }
