@@ -56,23 +56,25 @@ public class User {
 
     }
     public static String getUserHashedPassword(int _id) throws CommunicationsException {
-        Map dataMap = new HashMap();
+        Map<String , String> dataMap = null;
+        String hashed_password = null;
         String query = "SELECT hashed_password FROM users WHERE id = " + _id;
         try {
-            dataMap = DatabaseInterface.dbExecuteQuery(query);
+            dataMap = DatabaseInterface.dbExecuteQuery(query).get(0);
+            hashed_password = (String)dataMap.get("hashed_password");
         } catch (CommunicationsException e) {
             throw e;
         } catch (Exception e) {
             System.out.println("Error in getUserHashedPassword() in User ");
             System.out.println("Error: " + e);
         }
-        return (String)dataMap.get("hashed_password");
+        return hashed_password;
     }
-    public static Map getUserData(int _id) throws CommunicationsException {
-        Map dataMap = new HashMap();
+    public static Map<String , String> getUserData(int _id) throws CommunicationsException {
         String query = "SELECT * FROM users WHERE id = " + _id;
+        Map<String , String> dataMap = null;
         try {
-            dataMap = DatabaseInterface.dbExecuteQuery(query);
+            dataMap = DatabaseInterface.dbExecuteQuery(query).get(0);
         } catch (CommunicationsException e) {
             throw e;
         } catch (Exception e) {
@@ -80,6 +82,19 @@ public class User {
             System.out.println("Error: " + e);
         }
         return dataMap;
+    }
+    public static List<Map<String , String>> getAllUsersData() throws CommunicationsException {
+        List<Map<String , String>> dataMapList = null;
+        String query = "SELECT * FROM users";
+        try {
+            dataMapList = DatabaseInterface.dbExecuteQuery(query);
+        } catch (CommunicationsException e) {
+            throw e;
+        } catch (Exception e) {
+            System.out.println("Error in getUserData() in User ");
+            System.out.println("Error: " + e);
+        }
+        return dataMapList;
     }
     public static void deleteUser(int _id) {
         try {

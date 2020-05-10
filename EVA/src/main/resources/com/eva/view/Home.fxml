@@ -96,7 +96,7 @@
                   <Insets left="50.0" />
                </padding>
             </JFXButton>
-            <Label prefHeight="30.0" prefWidth="252.0" text="User" textFill="#171717">
+            <Label prefHeight="30.0" prefWidth="252.0" text="User/Admin" textFill="#171717">
                <font>
                   <Font size="13.0" />
                </font>
@@ -104,7 +104,25 @@
                   <Insets left="40.0" />
                </padding>
             </Label>
-            <JFXButton onAction="#logout" alignment="BASELINE_LEFT" graphicTextGap="10.0" prefHeight="43.0" prefWidth="252.0" ripplerFill="#bfadf8" text="Logout" textFill="#5b5858">
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="10.0" prefHeight="43.0" prefWidth="252.0" ripplerFill="#bfadf8" text="User Management" textFill="#5b5858">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/agencies.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="10.0" onAction="#logout" prefHeight="43.0" prefWidth="252.0" ripplerFill="#bfadf8" text="Logout" textFill="#5b5858">
                <font>
                   <Font size="13.0" />
                </font>

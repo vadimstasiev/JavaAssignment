@@ -122,7 +122,7 @@ public class FullRegister extends DataController {
     }
     public void deleteProfile() {
         App.DialogReferenceAnswer referenceAnswer = new App.DialogReferenceAnswer();
-        App.DialogBox("Confirm", "Are you sure you want to delete?", "DialogBox", referenceAnswer);
+        App.DialogBox("Confirm", "Are you sure you want to delete your account?", "DangerDialogBox", referenceAnswer);
         if(referenceAnswer.answer.equals("Yes")){
             int user_id_int = 0;
             try {

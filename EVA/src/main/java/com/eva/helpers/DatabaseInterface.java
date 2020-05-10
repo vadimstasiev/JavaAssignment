@@ -4,7 +4,9 @@ package com.eva.helpers;
 import com.mysql.cj.jdbc.exceptions.CommunicationsException;
 
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class DatabaseInterface {
@@ -17,8 +19,6 @@ public class DatabaseInterface {
     private static final String USER = "root";
     private static final String PASSWORD = "";
     private static final String URL = "jdbc:mysql://localhost/" + DBNAME + "?useTimezone=true&serverTimezone=UTC";
-    private static Object SQLTimeoutException;
-    private static Object SQLException;
 
     public static void DBconnect() throws CommunicationsException {
         try {
@@ -47,10 +47,9 @@ public class DatabaseInterface {
         } catch (SQLException e) {
             System.out.println("Error: " + e);
         }
-
     }
 
-    public static Map dbExecuteQuery(String query) throws SQLException {
+    public static List<Map<String , String>> dbExecuteQuery(String query) throws SQLException {
         DBconnect();
         try {
             res = st.executeQuery(query);
@@ -60,20 +59,23 @@ public class DatabaseInterface {
             System.out.println("Error: " + e);
             System.out.println("Error in Query: " + query);
         }
-        Map dataMap = new HashMap();
+        List<Map<String , String>> dataMapList  = new ArrayList<>();
         ResultSetMetaData rsmd = res.getMetaData();
         int columnCount = rsmd.getColumnCount();
+        int j = 0;
         while (res.next()) {
-            if(res.getString("hashed_password")!="") {
+            if(res.getString("hashed_password")!="") { // checks row is not empty
+                Map<String,String> dataMap = new HashMap<String, String>();
                 int resSize = res.getFetchSize();
                 for(int i=1;i<=columnCount;i++) {
-                    dataMap.put(rsmd.getColumnName(i), res.getString(i));
-                    //System.out.println("Column: "+ rsmd.getColumnName(i)+"  Value: "+ res.getString(i));
+                    dataMap.put( rsmd.getColumnName(i), res.getString(i));
                 }
+                dataMapList.add(j,dataMap);
             }
+            j++;
         }
         DBdisconnect();
-        return dataMap;
+        return dataMapList;
     }
 
     public static void dbExecuteUpdate(String query) throws SQLException {
@@ -88,7 +90,4 @@ public class DatabaseInterface {
         }
         DBdisconnect();
     }
-
-
-
 }
