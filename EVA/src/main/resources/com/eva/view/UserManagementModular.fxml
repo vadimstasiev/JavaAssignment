@@ -4,16 +4,16 @@
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="399.0" prefWidth="949.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eva.controller.UserManagement">
+<AnchorPane id="AnchorPane" prefHeight="477.0" prefWidth="949.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eva.controller.UserManagement">
    <children>
-      <Pane layoutX="29.0" layoutY="22.0" prefHeight="338.0" prefWidth="896.0" style="-fx-background-color: #fff;">
+      <Pane layoutX="29.0" layoutY="22.0" prefHeight="430.0" prefWidth="896.0" style="-fx-background-color: #fff;">
          <effect>
             <DropShadow color="#d7d2d2" height="50.0" radius="24.5" width="50.0" />
          </effect>
          <children>
-            <VBox alignment="CENTER" layoutX="23.0" layoutY="14.0" prefHeight="312.0" prefWidth="850.0">
+            <VBox alignment="CENTER" layoutX="23.0" layoutY="14.0" prefHeight="401.0" prefWidth="850.0">
                <children>
-                  <TableView fx:id="table" prefHeight="300.0" prefWidth="850.0">
+                  <TableView fx:id="table" prefHeight="398.0" prefWidth="850.0">
                      <columns>
                         <TableColumn fx:id="user_id_col" prefWidth="75.0" text="ID" />
                         <TableColumn fx:id="fullname_col" prefWidth="75.0" text="Full Name" />
