@@ -18,6 +18,8 @@ import java.time.LocalDate;
 import java.util.Map;
 
 public class FullRegister extends DataController {
+    private boolean openNew = true;
+
     public void initData(Map data) {
         super.initData(data); // dataMap = data
         first_name.setText((String)dataMap.get("first_name"));
@@ -32,6 +34,11 @@ public class FullRegister extends DataController {
             dob.setValue(date);
         } catch (Exception e) { }
     }
+
+    public void setOpenNew(boolean openNew) {
+        this.openNew = openNew;
+    }
+
     @FXML
     public TextField first_name;
     @FXML
@@ -88,7 +95,9 @@ public class FullRegister extends DataController {
                         (String)dataMap.get("hashed_password")
                 );
                 dataMap = User.getUserData(user_id_int);
-                App.newDataWindow("Home","Home", dataMap);
+                if(openNew){
+                    App.newDataWindow("Home","Home", dataMap);
+                }
                 close();
             } catch (NumberFormatException e){
                 App.AlertBox("Error", "Error parsing the user ID.", "ErrorAlertBox");

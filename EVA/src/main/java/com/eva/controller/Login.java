@@ -50,7 +50,6 @@ public class Login {
                 // throws NumberFormatException
                 user_id_int = Integer.parseInt(user_id.getText().trim());
                 // password validation
-
                 if(password.getText().equals("")) {
                     show_error("Please enter your password");
                 } else {
@@ -78,8 +77,6 @@ public class Login {
                 App.AlertBox("Error", "Error connecting to the database.", "ErrorAlertBox");
             }
         }
-
-
     }
     @FXML
     VBox window;

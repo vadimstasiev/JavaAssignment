@@ -58,7 +58,8 @@ public class App extends Application {
         }
     }
 
-    public static void newDataWindow(String title, String view, Map dataMap) {
+    public static DataController newDataWindow(String title, String view, Map dataMap) {
+        DataController controller = null;
         try {
             FXMLLoader loader = loadFXML(view);
             Stage stage = new Stage();
@@ -69,7 +70,7 @@ public class App extends Application {
                             (Pane) loader.load()
                     )
             );
-            DataController controller = loader.<DataController>getController();
+            controller = loader.<DataController>getController();
 
             controller.initData(dataMap);
             stage.show();
@@ -77,6 +78,7 @@ public class App extends Application {
             System.out.println("Error Creating Data Window");
             System.out.println("Error: "+ e);
         }
+        return controller;
     }
 
     public static void AlertBox(String title, String message, String view) {
