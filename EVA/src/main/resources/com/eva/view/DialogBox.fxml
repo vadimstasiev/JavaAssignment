@@ -6,9 +6,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox fx:id="window" alignment="CENTER" prefHeight="221.0" prefWidth="560.0" spacing="20.0" style="-fx-min-height: 200; -fx-min-width: 250;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eva.controller.DialogBox">
+<VBox fx:id="window" alignment="CENTER" prefHeight="221.0" prefWidth="664.0" spacing="20.0" style="-fx-min-height: 200; -fx-min-width: 250;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eva.controller.DialogBox">
     <children>
-        <Label fx:id="labelMessage" alignment="CENTER" contentDisplay="CENTER" minHeight="60.0" prefHeight="123.0" prefWidth="386.0" text="Dialog message here?" wrapText="true">
+        <Label fx:id="labelMessage" alignment="CENTER" contentDisplay="CENTER" minHeight="60.0" prefHeight="131.0" prefWidth="624.0" text="Dialog message here?" textAlignment="CENTER" wrapText="true">
             <font>
                 <Font size="26.0" />
             </font>

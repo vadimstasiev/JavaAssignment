@@ -27,11 +27,12 @@ public class User {
            String postcode,
            String dob,
            Boolean isOrganizer,
+           Boolean isAdmin,
            String hashed_password
     ) throws CommunicationsException, SQLIntegrityConstraintViolationException {
         String query = "INSERT INTO `users` " +
                 "(`id`, `first_name`, `last_name`, `gender`, `address_line`, `town`, " +
-                "`county`, `postcode`, `dob`, `isOrganizer`, `hashed_password`)" +
+                "`county`, `postcode`, `dob`, `isOrganizer`, `isAdmin`, `hashed_password`)" +
                 " VALUES " +
                 "('" + id +
                 "', '" + first_name +
@@ -43,6 +44,7 @@ public class User {
                 "', '" + postcode +
                 "', '" + dob +
                 "', '" + (isOrganizer ? 1 : 0) +
+                "', '" + (isAdmin ? 1 : 0) +
                 "', '" + hashed_password +"');";
         try {
             DatabaseInterface.dbExecuteUpdate(query);

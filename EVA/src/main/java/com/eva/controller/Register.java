@@ -75,6 +75,7 @@ public class Register {
                         "",
                         "",
                         false,
+                        false,
                         Password.encryptPassword(password.getText())
                 );
                 App.AlertBox("Success", "You have successfully registered, now please log in.", "SuccessAlertBox");

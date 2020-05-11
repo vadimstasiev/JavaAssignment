@@ -55,7 +55,7 @@ public class FullRegister extends DataController {
     public TextField postcode;
     @FXML
     public DatePicker dob;
-    public void updateDetails(ActionEvent actionEvent) throws IOException, SQLException {
+    public void updateDetails() {
         hide_error();
         // password validation
         if(first_name.getText().equals("") || last_name.getText().equals("")) {
@@ -77,8 +77,6 @@ public class FullRegister extends DataController {
             show_error("Please enter your date of birth");
         } else {
             try {
-                System.out.println(dataMap.get("id"));
-                System.out.println(dataMap.get("hashed_password"));
                 int user_id_int = Integer.parseInt(dataMap.get("id").toString());
                 User.deleteUser(user_id_int);
                 User.createUser(
@@ -91,6 +89,7 @@ public class FullRegister extends DataController {
                         county.getText(),
                         postcode.getText(),
                         dob.getValue().toString(),
+                        false,
                         false,
                         (String)dataMap.get("hashed_password")
                 );

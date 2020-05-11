@@ -2,6 +2,7 @@ package com.eva.controller;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.List;
 import java.util.Map;
 import java.util.ResourceBundle;
@@ -31,7 +32,7 @@ public class UserManagement implements Initializable
     @FXML
     private TableView<TableRowData> table;
     @FXML
-    private TableColumn<TableRowData, String> user_id_col, fullname_col, isOrganizer_col, button_col;
+    private TableColumn<TableRowData, String> user_id_col, fullname_col, isOrganizer_col, button1_col, button2_col;
     URL url;
     ResourceBundle rb;
     @Override
@@ -157,7 +158,7 @@ public class UserManagement implements Initializable
                     btn.setTextFill(WHITE);
                     btn.setStyle("-fx-background-color: #473E98;");
                     btn.setText("Edit User Profile");
-                    btn.setMinWidth(200);
+                    btn.setMinWidth(150);
                     btn.setOnAction(event -> {
                         try{
                             int user_id_int = Integer.parseInt(tableRowData.getUser_id().trim());
@@ -194,7 +195,89 @@ public class UserManagement implements Initializable
             }
         };
 
-        button_col.setCellFactory(cellFactory3);
+        button1_col.setCellFactory(cellFactory3);
+
+        Callback<TableColumn<TableRowData, String>, TableCell<TableRowData, String>> cellFactory4
+                = (TableColumn<TableRowData, String> param) -> new TableCell<>() {
+            final JFXButton btn = new JFXButton();
+            @Override
+            public void updateItem(String item, boolean empty) {
+                super.updateItem(item, empty);
+                if (empty) {
+                    setGraphic(null);
+                    setText(null);
+                } else {
+                    int currentIndex = getIndex();
+                    TableRowData tableRowData = table.getItems().get(currentIndex);
+                    if(tableRowData.getOrganizer() == "Yes"){
+                        btn.setStyle("-fx-background-color: red;");
+                        btn.setText("Remove Organizer");
+                    } else {
+                        btn.setStyle("-fx-background-color: #473E98;");
+                        btn.setText("Make Organizer");
+                    }
+
+                    btn.nodeOrientationProperty().setValue(RIGHT_TO_LEFT);
+                    btn.setPrefHeight(30);
+                    btn.setRipplerFill(WHITE);
+                    btn.setTextFill(WHITE);
+                    btn.setMinWidth(150);
+                    btn.setOnAction(event -> {
+                        try{
+                            int user_id_int = Integer.parseInt(tableRowData.getUser_id().trim());
+                            Map dataMap = User.getUserData(user_id_int);
+                            App.DialogReferenceAnswer referenceAnswer = new App.DialogReferenceAnswer();
+                            if(dataMap.get("isOrganizer").equals("0")) {
+                                App.DialogBox("Confirm", "Are you sure you want to give organizer rights to this user?", "DialogBox", referenceAnswer);
+                                if(referenceAnswer.answer.equals("Yes")) {
+                                    makeOrganizer(dataMap, "Yes");
+                                }
+                            } else {
+                                App.DialogBox("Confirm", "Are you sure you want to remove the organizer rights from this user?", "DangerDialogBox", referenceAnswer);
+                                if(referenceAnswer.answer.equals("Yes")) {
+                                    makeOrganizer(dataMap, "No");
+                                }
+                            }
+                            initialize(url, rb);
+                        } catch (NumberFormatException e){
+                            App.AlertBox("Error", "Error parsing the user id.", "ErrorAlertBox");
+                        } catch(CommunicationsException e) {
+                            App.AlertBox("Error", "Error connecting to the database.", "ErrorAlertBox");
+                        }
+                    });
+                    setGraphic(btn);
+                }
+            }
+        };
+
+        button2_col.setCellFactory(cellFactory4);
+    }
+
+    public void makeOrganizer(Map dataMap, String isOrganizer) {
+        try {
+            int user_id_int = Integer.parseInt(dataMap.get("id").toString());
+            User.deleteUser(user_id_int);
+            User.createUser(
+                    user_id_int,
+                    (String)dataMap.get("first_name"),
+                    (String)dataMap.get("last_name"),
+                    (String)dataMap.get("gender"),
+                    (String)dataMap.get("address_line"),
+                    (String)dataMap.get("town"),
+                    (String)dataMap.get("county"),
+                    (String)dataMap.get("postcode"),
+                    (String)dataMap.get("dob"),
+                    isOrganizer.equals("Yes"),
+                    false,
+                    (String)dataMap.get("hashed_password")
+            );
+        } catch (NumberFormatException e){
+            App.AlertBox("Error", "Error parsing the user ID.", "ErrorAlertBox");
+        } catch(CommunicationsException e) {
+            App.AlertBox("Error", "Error connecting to the database.", "ErrorAlertBox");
+        } catch(SQLIntegrityConstraintViolationException e) {
+            App.AlertBox("Error", "Error updating account already exists.", "ErrorAlertBox");
+        }
     }
 }
 
