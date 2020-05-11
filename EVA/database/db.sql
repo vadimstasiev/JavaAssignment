@@ -32,6 +32,7 @@ CREATE TABLE `users` (
   `postcode` varchar(120) NOT NULL,
   `dob` varchar(120) NOT NULL,
   `isOrganizer` tinyint(1) NOT NULL,
+  `isAdmin` tinyint(1) NOT NULL,
   `hashed_password` varchar(300) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -39,10 +40,10 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `first_name`, `last_name`, `gender`, `address_line`, `town`, `county`, `postcode`, `dob`, `isOrganizer`, `hashed_password`) VALUES
+INSERT INTO `users` (`id`, `first_name`, `last_name`, `gender`, `address_line`, `town`, `county`, `postcode`, `dob`, `isOrganizer`, `isAdmin`, `hashed_password`) VALUES
 (234234, '', '', '', '', '', '', '', '', 0, '$2a$10$vz5hN5Cl54Tewqo4avow5efFXlpQqABlRoCnqFywF4SGAQpS8Z/a6'),
 (1900872, '', '', '', '', '', '', '', '', 0, '$2a$10$xevbYk5ZlG2GxJ00RwYTzu6SbciXKQ.Oj98SWtVKq9Lt9bp1nLr9K'),
-(1900877, 'Vadim', 'Stasiev', 'Male', 'Some place', 'Dunstable', 'Bedfordshire', 'LU6 3FG', '21/03/1998', 0, 'sheu23urgjwhg32jrh23jebvshdvufvb3u2hbs');
+(1900877, 'Vadim', 'Stasiev', 'Male', 'Some place', 'Dunstable', 'Bedfordshire', 'LU6 3FG', '21/03/1998', 0, 0, 'sheu23urgjwhg32jrh23jebvshdvufvb3u2hbs');
 
 --
 -- Indexes for dumped tables

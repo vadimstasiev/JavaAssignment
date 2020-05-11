@@ -13,12 +13,13 @@ import com.jfoenix.controls.JFXButton;
 import com.mysql.cj.jdbc.exceptions.CommunicationsException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.util.Callback;
@@ -33,12 +34,15 @@ public class UserManagement implements Initializable
     private TableView<TableRowData> table;
     @FXML
     private TableColumn<TableRowData, String> user_id_col, fullname_col, isOrganizer_col, button1_col, button2_col;
-    URL url;
-    ResourceBundle rb;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        this.url = url;
-        this.rb = rb;
+        initialize();
+    }
+    public void initialize(){
+        initialize("", "");
+    }
+
+    public void initialize(String id, String fullname){
         fabricateRow();
 //        this.dataMapList = dataMapList;
         ObservableList<TableRowData> data = FXCollections.observableArrayList();
@@ -52,12 +56,25 @@ public class UserManagement implements Initializable
                     System.out.println("Error adding user to table.");
                 }
             }
-        table.setItems(data);
+            FilteredList<TableRowData> filteredData = new FilteredList<TableRowData>(data, p -> {
+                if(p.getUser_id().contains(id) &&p.getFull_name().contains(fullname)){
+                    return true;
+                } else {
+                    return false;
+                }
+            });
+            table.setItems(filteredData);
         } catch (CommunicationsException e) {
             App.AlertBox("Error", "Error connecting to the database.", "ErrorAlertBox");
         }
     }
 
+    @FXML
+    public TextField searchID;
+    public TextField searchFullname;
+    public void triggerSearch() {
+        initialize(searchID.getText(), searchFullname.getText());
+    }
 
 
     private class TableRowData {
@@ -178,7 +195,7 @@ public class UserManagement implements Initializable
                                 controller.initData(dataMap);
                                 controller.setOpenNew(false);
                                 stage.showAndWait();
-                                initialize(url, rb);
+                                initialize();
                             } catch (IOException e) {
                                 System.out.println("Error Creating Window");
                                 System.out.println("Error: "+ e);
@@ -238,7 +255,7 @@ public class UserManagement implements Initializable
                                     makeOrganizer(dataMap, "No");
                                 }
                             }
-                            initialize(url, rb);
+                            initialize();
                         } catch (NumberFormatException e){
                             App.AlertBox("Error", "Error parsing the user id.", "ErrorAlertBox");
                         } catch(CommunicationsException e) {
