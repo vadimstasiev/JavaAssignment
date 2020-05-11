@@ -5,4 +5,7 @@ You should all familiarize yourselves with JavaFx and the FXML side of it, that 
 
 
 ## Open the Existing Project
+
+Before you run the project you should import the database into phpMyAdmin. [Go here.](./database/)
+
 To open the existing project all that you have to do is open this folder in `IntelliJ IDEA`.

@@ -77,11 +77,20 @@ public class Home extends DataController {
     public void editProfile() {
         //App.newDataWindow("Update User Details", "FullRegister", dataMap);
         //close(); OR
-        loadDataView("FullRegisterModular");
+        loadSimpleView("FullRegisterModular");
+    }
+
+    public void addEvent() {
+        loadDataView("EventModular");
+    }
+
+    public void openUserManagement() {
+        loadSimpleView("UserManagementModular");
     }
 
     @FXML
     AnchorPane window;
+
     public void close(){
         Stage stage = (Stage) window.getScene().getWindow();
         stage.close();
@@ -90,9 +99,5 @@ public class Home extends DataController {
     public void logout() {
         App.newSimpleWindow("Login", "Login");
         close();
-    }
-
-    public void openUserManagement() {
-        loadSimpleView("UserManagementModular");
     }
 }

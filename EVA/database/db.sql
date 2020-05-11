@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 07, 2020 at 06:28 PM
+-- Generation Time: May 12, 2020 at 01:29 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.2.30
 
@@ -14,6 +14,23 @@ SET time_zone = "+00:00";
 --
 -- Database: `eva`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `events`
+--
+
+CREATE TABLE `events` (
+  `uuid` varchar(70) NOT NULL,
+  `location` varchar(300) NOT NULL,
+  `title` varchar(120) NOT NULL,
+  `description` text NOT NULL,
+  `date` varchar(60) NOT NULL,
+  `time` varchar(60) NOT NULL,
+  `placeLimitation` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 
 -- --------------------------------------------------------
 
@@ -37,17 +54,10 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `users`
+-- Indexes for table `events`
 --
-
-INSERT INTO `users` (`id`, `first_name`, `last_name`, `gender`, `address_line`, `town`, `county`, `postcode`, `dob`, `isOrganizer`, `isAdmin`, `hashed_password`) VALUES
-(234234, '', '', '', '', '', '', '', '', 0, '$2a$10$vz5hN5Cl54Tewqo4avow5efFXlpQqABlRoCnqFywF4SGAQpS8Z/a6'),
-(1900872, '', '', '', '', '', '', '', '', 0, '$2a$10$xevbYk5ZlG2GxJ00RwYTzu6SbciXKQ.Oj98SWtVKq9Lt9bp1nLr9K'),
-(1900877, 'Vadim', 'Stasiev', 'Male', 'Some place', 'Dunstable', 'Bedfordshire', 'LU6 3FG', '21/03/1998', 0, 0, 'sheu23urgjwhg32jrh23jebvshdvufvb3u2hbs');
-
---
--- Indexes for dumped tables
---
+ALTER TABLE `events`
+  ADD PRIMARY KEY (`uuid`);
 
 --
 -- Indexes for table `users`
@@ -55,13 +65,7 @@ INSERT INTO `users` (`id`, `first_name`, `last_name`, `gender`, `address_line`, 
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
---
--- AUTO_INCREMENT for dumped tables
---
 
---
--- AUTO_INCREMENT for table `users`
---
 ALTER TABLE `users`
   MODIFY `id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1900878;
 COMMIT;

@@ -39,7 +39,7 @@ public class UserManagement implements Initializable
         initialize();
     }
     public void initialize(){
-        initialize("", "");
+        triggerSearch();
     }
 
     public void initialize(String id, String fullname){

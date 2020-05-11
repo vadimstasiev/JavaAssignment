@@ -14,11 +14,11 @@
          <children>
             <HBox alignment="CENTER" layoutY="7.0" prefWidth="896.0" spacing="10.0">
                <children>
-                  <TextField fx:id="searchID" onKeyPressed="#triggerSearch" alignment="CENTER" layoutY="140.0" prefWidth="245.0" promptText="Search by ID">
+                  <TextField fx:id="searchID" onKeyTyped="#triggerSearch" alignment="CENTER" layoutY="140.0" prefWidth="245.0" promptText="Search by ID">
                      <font>
                         <Font size="15.0" />
                      </font></TextField>
-                  <TextField fx:id="searchFullname" onKeyPressed="#triggerSearch" alignment="CENTER" layoutY="140.0" prefHeight="31.0" prefWidth="615.0" promptText="Search by Full Name">
+                  <TextField fx:id="searchFullname" onKeyTyped="#triggerSearch" alignment="CENTER" layoutY="140.0" prefHeight="31.0" prefWidth="615.0" promptText="Search by Full Name">
                      <font>
                         <Font size="15.0" />
                      </font></TextField>
