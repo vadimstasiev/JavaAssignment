@@ -42,7 +42,7 @@
                   <Insets top="60.0" />
                </VBox.margin>
             </Label>
-            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="10.0" prefHeight="43.0" prefWidth="252.0" ripplerFill="#bfadf8" text="Search Events" textFill="#5b5858">
+            <JFXButton onAction="#searchEvents" alignment="BASELINE_LEFT" graphicTextGap="10.0" prefHeight="43.0" prefWidth="252.0" ripplerFill="#bfadf8" text="Search Events" textFill="#5b5858">
                <VBox.margin>
                   <Insets />
                </VBox.margin>
@@ -52,7 +52,7 @@
                <graphic>
                   <ImageView accessibleText="Project List" fitHeight="16.0" fitWidth="144.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@images/projects.png" />
+                        <Image url="@images/search.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -78,7 +78,7 @@
                   <Insets left="50.0" />
                </padding>
             </JFXButton>
-            <JFXButton onAction="#addEvent" alignment="BASELINE_LEFT" graphicTextGap="10.0" prefHeight="43.0" prefWidth="252.0" ripplerFill="#bfadf8" text="Add Events" textFill="#5b5858">
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="10.0" prefHeight="43.0" prefWidth="252.0" ripplerFill="#bfadf8" text="Manage Events" textFill="#5b5858">
                <font>
                   <Font size="13.0" />
                </font>
@@ -86,6 +86,24 @@
                   <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@images/projections.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" graphicTextGap="10.0" onAction="#addEvent" prefHeight="43.0" prefWidth="252.0" ripplerFill="#bfadf8" text="Add Events" textFill="#5b5858">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/projects.png" />
                      </image>
                      <viewport>
                         <Rectangle2D />
@@ -129,7 +147,7 @@
                <graphic>
                   <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@images/icons8_Share_64px.png" />
+                        <Image url="@images/logout.png" />
                      </image>
                      <viewport>
                         <Rectangle2D />

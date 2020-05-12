@@ -67,7 +67,7 @@ public class Event {
         } catch (CommunicationsException e) {
             throw e;
         } catch (Exception e) {
-            System.out.println("Error in getEventData() in Event ");
+            System.out.println("Error in getAllEventData() in Event ");
             System.out.println("Error: " + e);
         }
         return dataMapList;

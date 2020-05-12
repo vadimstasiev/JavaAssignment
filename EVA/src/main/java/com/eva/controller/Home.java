@@ -77,12 +77,14 @@ public class Home extends DataController {
     public void editProfile() {
         //App.newDataWindow("Update User Details", "FullRegister", dataMap);
         //close(); OR
-        loadSimpleView("FullRegisterModular");
+        loadDataView("FullRegisterModular");
     }
 
     public void addEvent() {
         loadDataView("EventModular");
     }
+
+    public void searchEvents() { loadDataView("SearchEvents"); }
 
     public void openUserManagement() {
         loadSimpleView("UserManagementModular");

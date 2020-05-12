@@ -64,14 +64,12 @@ public class DatabaseInterface {
         int columnCount = rsmd.getColumnCount();
         int j = 0;
         while (res.next()) {
-            if(res.getString("hashed_password")!="") { // checks row is not empty
-                Map<String,String> dataMap = new HashMap<String, String>();
-                int resSize = res.getFetchSize();
-                for(int i=1;i<=columnCount;i++) {
-                    dataMap.put( rsmd.getColumnName(i), res.getString(i));
-                }
-                dataMapList.add(j,dataMap);
+            Map<String,String> dataMap = new HashMap<String, String>();
+            int resSize = res.getFetchSize();
+            for(int i=1;i<=columnCount;i++) {
+                dataMap.put( rsmd.getColumnName(i), res.getString(i));
             }
+            dataMapList.add(j,dataMap);
             j++;
         }
         DBdisconnect();

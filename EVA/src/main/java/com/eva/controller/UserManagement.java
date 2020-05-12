@@ -36,6 +36,7 @@ public class UserManagement implements Initializable
     private TableColumn<TableRowData, String> user_id_col, fullname_col, isOrganizer_col, button1_col, button2_col;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        fabricateRow();
         initialize();
     }
     public void initialize(){
@@ -43,7 +44,6 @@ public class UserManagement implements Initializable
     }
 
     public void initialize(String id, String fullname){
-        fabricateRow();
 //        this.dataMapList = dataMapList;
         ObservableList<TableRowData> data = FXCollections.observableArrayList();
         try{
@@ -182,7 +182,7 @@ public class UserManagement implements Initializable
                             Map dataMap = User.getUserData(user_id_int);
                             FullRegister controller = null;
                             try {
-                                FXMLLoader loader = App.loadFXML("FullRegister");
+                                FXMLLoader loader = App.loadFXML("AdminFullRegister");
                                 Stage stage = new Stage();
                                 stage.setTitle("Update User Details");
                                 //Display window and wait for it to be closed before returning

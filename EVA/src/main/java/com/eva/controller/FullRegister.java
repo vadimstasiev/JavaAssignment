@@ -139,7 +139,10 @@ public class FullRegister extends DataController {
                 App.AlertBox("Error", "Error parsing the user ID.", "ErrorAlertBox");
             }
             User.deleteUser(user_id_int);
-            logout();
+            if(openNew){
+                logout();
+            }
+            close();
         }
     }
 }
