@@ -24,10 +24,6 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-/**
- *
- * @author oXCToo
- */
 public class Home extends DataController {
 
     @FXML
@@ -42,8 +38,7 @@ public class Home extends DataController {
         super.initData(data); // dataMap = data
         full_name.setText(dataMap.get("first_name") + " " +  dataMap.get("last_name"));
         id_number.setText("User ID: " +  dataMap.get("id"));
-        loadSimpleView("UserManagementModular");
-//        loadDataView("FullRegisterModular");
+        loadSimpleView("DefaultModular");
     }
 
     private void loadSimpleView(String view)
@@ -75,8 +70,6 @@ public class Home extends DataController {
     }
 
     public void editProfile() {
-        //App.newDataWindow("Update User Details", "FullRegister", dataMap);
-        //close(); OR
         loadDataView("FullRegisterModular");
     }
 

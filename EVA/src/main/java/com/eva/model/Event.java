@@ -20,10 +20,11 @@ public class Event {
            String description,
            String date,
            String time,
+           Integer user_fk,
            Integer placeLimitation
     ) throws CommunicationsException, SQLIntegrityConstraintViolationException {
         String query = "INSERT INTO `events` " +
-                "(`uuid`, `location`, `title`, `description`, `date`, `time`, " +
+                "(`uuid`, `location`, `title`, `description`, `date`, `time`, `user_fk`, " +
                 "`placeLimitation`)" +
                 " VALUES " +
                 "('" + uuid +
@@ -32,6 +33,7 @@ public class Event {
                 "', '" + description +
                 "', '" + date +
                 "', '" + time +
+                "', '" + user_fk +
                 "', '" + placeLimitation +"');";
         try {
             DatabaseInterface.dbExecuteUpdate(query);
@@ -49,6 +51,21 @@ public class Event {
         Map<String , String> dataMap = null;
         try {
             dataMap = DatabaseInterface.dbExecuteQuery(query).get(0);
+        } catch (CommunicationsException e) {
+            throw e;
+        } catch (IndexOutOfBoundsException e) {
+            throw e;
+        } catch (Exception e) {
+            System.out.println("Error in getEventData() in Event ");
+            System.out.println("Error: " + e);
+        }
+        return dataMap;
+    }
+    public static List<Map<String , String>> getEventsDataByUser(Integer user_fk) throws CommunicationsException {
+        String query = "SELECT * FROM events WHERE uuid = '" + user_fk + "'";
+        List<Map<String , String>> dataMap = null;
+        try {
+            dataMap = DatabaseInterface.dbExecuteQuery(query);
         } catch (CommunicationsException e) {
             throw e;
         } catch (IndexOutOfBoundsException e) {

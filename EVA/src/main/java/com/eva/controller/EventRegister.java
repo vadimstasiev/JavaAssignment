@@ -52,9 +52,7 @@ public class EventRegister extends DataController {
         } catch (Exception e) { }
     }
 
-    private String setNotNull(String str){
-        return str==null?"":str;
-    }
+    private String setNotNull(String str){ return str==null?"":str; }
 
     public void setOpenNew(boolean openNew) {
         this.openNew = openNew;
@@ -72,6 +70,12 @@ public class EventRegister extends DataController {
             show_error("Please enter the maximum people allowed at the event");
         }  else {
             try {
+                int user_id_int = 0;
+                try {
+                    user_id_int = Integer.parseInt(dataMap.get("id").toString());
+                } catch (NumberFormatException e) {
+                    show_error("Error parsing user id");
+                }
                 String uuidStr = setNotNull((String) eventMap.get("uuid"));
                 try { // check to see if event exists to update it
                     Map eventMapTemp = Event.getEventData(uuidStr);
@@ -88,19 +92,14 @@ public class EventRegister extends DataController {
                         description.getText(),
                         date.getValue().toString(),
                         time.getText(),
-                        placeLimitationInt
-                        // Foreign key linked to user // TODO
+                        placeLimitationInt,
+                        user_id_int
                 );
                 App.AlertBox("Success", "You have successfully created an event!", "SuccessAlertBox");
                 if(openNew){
-                    try {
-                        int user_id_int = Integer.parseInt(dataMap.get("id").toString());
-                        dataMap = User.getUserData(user_id_int);
-                        App.newDataWindow("Home","Home", dataMap);
-                        close();
-                    } catch (NumberFormatException e) {
-                        show_error("Error parsing user id");
-                    }
+                    dataMap = User.getUserData(user_id_int);
+                    App.newDataWindow("Home","Home", dataMap);
+                    close();
                 }
             } catch (NumberFormatException e){
                 show_error("Please enter a number for the maximum people allowed.");

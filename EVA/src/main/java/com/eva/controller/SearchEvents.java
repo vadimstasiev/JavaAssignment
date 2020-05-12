@@ -43,15 +43,17 @@ public class SearchEvents extends DataController implements Initializable
         triggerSearch();
     }
 
+    List<Map<String , String>> eventMapList;
+
     public void initialize(String name, String location){
 
         ObservableList<TableRowData> data = FXCollections.observableArrayList();
         try{
-
-            List<Map<String , String>> eventMapList = Event.getAllEventData();
+            eventMapList = Event.getAllEventData();
             for(Map eventMap:eventMapList) {
                 try {
                     data.add(new TableRowData(
+                            setNotNull((String)eventMap.get("uuid")),
                             setNotNull((String)eventMap.get("title")),
                             setNotNull(eventMap.get("location") + " "+ eventMap.get("last_name")),
                             setNotNull((String)eventMap.get("date")),
@@ -69,20 +71,24 @@ public class SearchEvents extends DataController implements Initializable
     }
 
 
-
-
     private class TableRowData {
+        private String uuid;
         private String name;
         private String location;
         private String date;
         private String placeLimitation;
 
-        public TableRowData(String name, String location, String date, String placeLimitation)
+        public TableRowData(String uuid, String name, String location, String date, String placeLimitation)
         {
+            this.uuid = uuid;
             this.name = name;
             this.location = location;
             this.date = date;
             this.placeLimitation = placeLimitation;
+        }
+
+        public String getUUID() {
+            return uuid;
         }
 
         public String getName() {
@@ -199,23 +205,28 @@ public class SearchEvents extends DataController implements Initializable
                         try{
                             int user_id_int = Integer.parseInt(setNotNull((String)dataMap.get("id")));
                             Map dataMap = User.getUserData(user_id_int);
-//                            FullRegister controller = null;
                             try {
-                                System.out.println(dataMap.get("id"));
-//                                FXMLLoader loader = App.loadFXML("FullRegister");
-//                                Stage stage = new Stage();
-//                                stage.setTitle("Update User Details");
-//                                //Display window and wait for it to be closed before returning
-//                                stage.setScene(
-//                                        new Scene(
-//                                                (Pane) loader.load()
-//                                        )
-//                                );
-//                                controller = loader.<FullRegister>getController();
-//                                controller.initData(dataMap);
-//                                controller.setOpenNew(false);
-//                                stage.showAndWait();
-//                                initialize();
+
+                                FXMLLoader loader = App.loadFXML("BookEvent");
+                                Stage stage = new Stage();
+                                stage.setTitle("Book Event");
+                                //Display window and wait for it to be closed before returning
+                                stage.setScene(
+                                        new Scene(
+                                                (Pane) loader.load()
+                                        )
+                                );
+                                BookEvent controller = loader.<BookEvent>getController();
+                                Map eventMap = null;
+                                for(Map eventMapTemp:eventMapList) {
+                                    if(setNotNull((String)eventMapTemp.get("uuid"))==tableRowData.getUUID()) {
+                                        eventMap = eventMapTemp;
+                                        break;
+                                    }
+                                }
+                                controller.initData(dataMap, eventMap);
+                                stage.showAndWait();
+                                initialize();
                             } catch (Exception e) {
                                 System.out.println("Error Creating Window");
                                 System.out.println("Error: "+ e);

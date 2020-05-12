@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="464.0" prefWidth="949.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+       <VBox layoutY="6.0" prefHeight="312.0" prefWidth="949.0">
+           <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="253.0" prefWidth="949.0" text="EVA" textAlignment="JUSTIFY">
+               <font>
+                   <Font name="Bauhaus 93" size="130.0" />
+               </font>
+           </Label>
+           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="62.0" prefWidth="949.0" text="Extra-curricular eVent mAnagement System" textAlignment="JUSTIFY">
+               <font>
+                   <Font name="Candara Light" size="44.0" />
+               </font>
+           </Label>
+       </VBox>
+   </children>
+</AnchorPane>
