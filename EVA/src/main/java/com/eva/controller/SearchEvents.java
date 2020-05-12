@@ -1,6 +1,7 @@
 package com.eva.controller;
 
 import com.eva.App;
+import com.eva.model.Booking;
 import com.eva.model.Event;
 import com.eva.model.User;
 import com.jfoenix.controls.JFXButton;
@@ -37,33 +38,38 @@ public class SearchEvents extends DataController implements Initializable
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         fabricateRow();
-        initialize();
     }
-    public void initialize(){
+
+    public void initData(Map data){
+        super.initData(data);
         triggerSearch();
     }
 
     List<Map<String , String>> eventMapList;
 
-    public void initialize(String name, String location){
+    public void initData(String name, String location){
 
         ObservableList<TableRowData> data = FXCollections.observableArrayList();
         try{
             eventMapList = Event.getAllEventData();
+            String user_id = setNotNull((String) dataMap.get("id"));
             for(Map eventMap:eventMapList) {
                 try {
+                    String uuid = setNotNull((String) eventMap.get("uuid"));
+                    Boolean isBooked = (Booking.doesBookingExist(uuid, user_id));
                     data.add(new TableRowData(
                             setNotNull((String)eventMap.get("uuid")),
                             setNotNull((String)eventMap.get("title")),
-                            setNotNull(eventMap.get("location") + " "+ eventMap.get("last_name")),
+                            setNotNull((String)eventMap.get("location")),
                             setNotNull((String)eventMap.get("date")),
-                            setNotNull((String)eventMap.get("placeLimitation")))
+                            setNotNull((String)eventMap.get("placeLimitation")),
+                            isBooked)
                     );
                 } catch (Exception e) {
                     System.out.println("Error adding events to table.");
                 }
             }
-            FilteredList<TableRowData> filteredData = new FilteredList<TableRowData>(data, p -> p.getName().contains(name) && p.getLocation().contains(location));
+            FilteredList<TableRowData> filteredData = new FilteredList<>(data, p -> p.getName().contains(name) && p.getLocation().contains(location));
             table.setItems(filteredData);
         } catch (CommunicationsException e) {
             App.AlertBox("Error", "Error connecting to the database.", "ErrorAlertBox");
@@ -77,14 +83,16 @@ public class SearchEvents extends DataController implements Initializable
         private String location;
         private String date;
         private String placeLimitation;
+        private Boolean isBooked;
 
-        public TableRowData(String uuid, String name, String location, String date, String placeLimitation)
+        public TableRowData(String uuid, String name, String location, String date, String placeLimitation, Boolean isBooked)
         {
             this.uuid = uuid;
             this.name = name;
             this.location = location;
             this.date = date;
             this.placeLimitation = placeLimitation;
+            this.isBooked = isBooked;
         }
 
         public String getUUID() {
@@ -105,6 +113,10 @@ public class SearchEvents extends DataController implements Initializable
 
         public String getPlaceLimitation() {
             return placeLimitation;
+        }
+
+        public Boolean getIsBooked() {
+            return isBooked;
         }
     }
 
@@ -198,10 +210,11 @@ public class SearchEvents extends DataController implements Initializable
                     btn.setPrefHeight(30);
                     btn.setRipplerFill(WHITE);
                     btn.setTextFill(WHITE);
-                    btn.setStyle("-fx-background-color: #473E98;");
-                    btn.setText("Book Event");
                     btn.setMinWidth(150);
-                    btn.setOnAction(event -> {
+                    if(tableRowData.getIsBooked()){
+                        btn.setText("Book Event");
+                        btn.setStyle("-fx-background-color: #473E98;");
+                        btn.setOnAction(event -> {
                         try{
                             int user_id_int = Integer.parseInt(setNotNull((String)dataMap.get("id")));
                             Map dataMap = User.getUserData(user_id_int);
@@ -226,7 +239,7 @@ public class SearchEvents extends DataController implements Initializable
                                 }
                                 controller.initData(dataMap, eventMap);
                                 stage.showAndWait();
-                                initialize();
+                                triggerSearch();
                             } catch (Exception e) {
                                 System.out.println("Error Creating Window");
                                 System.out.println("Error: "+ e);
@@ -237,8 +250,14 @@ public class SearchEvents extends DataController implements Initializable
                         } catch(CommunicationsException e) {
                             App.AlertBox("Error", "Error connecting to the database.", "ErrorAlertBox");
                         }
-                    });
-                    setGraphic(btn);
+                        });
+                        setGraphic(btn);
+                    } else {
+                        btn.setText("Booked");
+                        btn.setStyle("-fx-background-color: green;");
+                        btn.setOnAction(event -> {});
+                        setGraphic(btn);
+                    }
                 }
             }
         };
@@ -250,7 +269,7 @@ public class SearchEvents extends DataController implements Initializable
     public TextField searchByName;
     public TextField searchByLocation;
     public void triggerSearch() {
-        initialize(searchByName.getText(), searchByLocation.getText());
+        initData(searchByName.getText(), searchByLocation.getText());
     }
 
     private String setNotNull(String str){

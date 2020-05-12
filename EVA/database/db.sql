@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 12, 2020 at 05:32 PM
+-- Generation Time: May 12, 2020 at 11:49 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.2.30
 
@@ -24,8 +24,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `bookings` (
   `id` int(11) NOT NULL,
   `event_fk` varchar(70) NOT NULL,
-  `user_fk` int(11) NOT NULL,
-  `date_booked` varchar(60) NOT NULL
+  `user_fk` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------

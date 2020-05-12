@@ -4,8 +4,7 @@
     <list default="true" id="9af80d04-4b3c-4ff7-a54e-64966ce98a40" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/db.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/eva/controller/EventRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eva/controller/EventRegister.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/eva/controller/Home.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eva/controller/Home.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eva/controller/BookEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eva/controller/BookEvent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/eva/controller/SearchEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eva/controller/SearchEvents.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/eva/model/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eva/model/Event.java" afterDir="false" />
     </list>
@@ -47,8 +46,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.eva.controller" />
       <recent name="com.eva.model" />
+      <recent name="com.eva.controller" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Repositories\JavaAssignment\EVA\src\main\resources\com\eva\view" />
@@ -112,26 +111,26 @@
     </state>
     <state x="523" y="230" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1474.864@0.0.1474.864" timestamp="1589071377064" />
     <state x="659" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1589215534181" />
-    <state width="1815" height="299" key="GridCell.Tab.0.bottom" timestamp="1589302190412">
+    <state width="1815" height="275" key="GridCell.Tab.0.bottom" timestamp="1589320223049">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state width="1431" height="232" key="GridCell.Tab.0.bottom/0.0.1474.864@0.0.1474.864" timestamp="1589201529048" />
-    <state width="1815" height="299" key="GridCell.Tab.0.bottom/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1589302190412" />
-    <state width="1815" height="299" key="GridCell.Tab.0.center" timestamp="1589302190412">
+    <state width="1815" height="275" key="GridCell.Tab.0.bottom/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1589320223049" />
+    <state width="1815" height="275" key="GridCell.Tab.0.center" timestamp="1589320223049">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state width="1431" height="232" key="GridCell.Tab.0.center/0.0.1474.864@0.0.1474.864" timestamp="1589201529048" />
-    <state width="1815" height="299" key="GridCell.Tab.0.center/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1589302190412" />
-    <state width="1815" height="299" key="GridCell.Tab.0.left" timestamp="1589302190412">
+    <state width="1815" height="275" key="GridCell.Tab.0.center/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1589320223049" />
+    <state width="1815" height="275" key="GridCell.Tab.0.left" timestamp="1589320223049">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state width="1431" height="232" key="GridCell.Tab.0.left/0.0.1474.864@0.0.1474.864" timestamp="1589201529047" />
-    <state width="1815" height="299" key="GridCell.Tab.0.left/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1589302190412" />
-    <state width="1815" height="299" key="GridCell.Tab.0.right" timestamp="1589302190412">
+    <state width="1815" height="275" key="GridCell.Tab.0.left/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1589320223049" />
+    <state width="1815" height="275" key="GridCell.Tab.0.right" timestamp="1589320223049">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state width="1431" height="232" key="GridCell.Tab.0.right/0.0.1474.864@0.0.1474.864" timestamp="1589201529048" />
-    <state width="1815" height="299" key="GridCell.Tab.0.right/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1589302190412" />
+    <state width="1815" height="275" key="GridCell.Tab.0.right/0.0.1858.1080/1920.0.1920.1080@0.0.1858.1080" timestamp="1589320223049" />
     <state x="547" y="320" key="com.intellij.ide.util.TipDialog" timestamp="1589202227999">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
