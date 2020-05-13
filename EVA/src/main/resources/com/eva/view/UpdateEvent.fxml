@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox fx:id="window" alignment="CENTER" minHeight="250.0" prefHeight="632.0" prefWidth="400.0" spacing="20.0" style="-fx-min-height: 600; -fx-min-width: 250;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eva.controller.BookEvent">
+<VBox fx:id="window" alignment="CENTER" minHeight="250.0" prefHeight="632.0" prefWidth="400.0" spacing="20.0" style="-fx-min-height: 600; -fx-min-width: 250;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eva.controller.EventRegister">
     <TextField maxHeight="0.0" maxWidth="0.0" minHeight="0.0" minWidth="0.0" opacity="0.0" prefHeight="0.0" prefWidth="0.0" />
     <Label alignment="CENTER" contentDisplay="CENTER" text="EVA" textAlignment="JUSTIFY">
         <font>
@@ -66,19 +66,24 @@
                 <Font size="17.0" />
             </font>
         </Label>
-        <TextField fx:id="locationOrPath" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="0" />
-        <TextField fx:id="title" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-        <TextArea fx:id="description" editable="false" prefHeight="53.0" prefWidth="249.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-        <TextField fx:id="date" editable="false" layoutX="139.0" layoutY="193.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-        <TextField fx:id="time" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-        <TextField fx:id="placeLimitation" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+        <TextField fx:id="locationOrPath" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <TextField fx:id="title" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <TextArea fx:id="description" prefHeight="53.0" prefWidth="249.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <DatePicker fx:id="date" editable="false" promptText="Please Select" showWeekNumbers="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <TextField fx:id="time" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <TextField fx:id="placeLimitation" GridPane.columnIndex="1" GridPane.rowIndex="5" />
     </GridPane>
     <Separator layoutX="10.0" layoutY="261.0" prefWidth="200.0" />
-    <HBox alignment="CENTER" spacing="20.0">
+    <HBox alignment="CENTER" spacing="10.0">
         <padding>
             <Insets bottom="20.0" right="5.0" />
         </padding>
-        <JFXButton layoutX="1041.0" layoutY="95.0" nodeOrientation="RIGHT_TO_LEFT" onAction="#bookEvent" prefHeight="30.0" ripplerFill="WHITE" style="-fx-background-color: #473E98;" text="Book Event" textFill="WHITE">
+        <JFXButton layoutX="1041.0" layoutY="95.0" nodeOrientation="RIGHT_TO_LEFT" onAction="#createOrUpdateEvent" prefHeight="30.0" ripplerFill="WHITE" style="-fx-background-color: #473E98;" text="Update Details" textFill="WHITE">
+            <font>
+                <Font name="Bauhaus 93" size="24.0" />
+            </font>
+        </JFXButton>
+        <JFXButton layoutX="1041.0" layoutY="95.0" nodeOrientation="RIGHT_TO_LEFT" onAction="#deleteEvent" prefHeight="30.0" ripplerFill="WHITE" style="-fx-background-color: red;" text="Delete Event" textFill="WHITE">
             <font>
                 <Font name="Bauhaus 93" size="24.0" />
             </font>

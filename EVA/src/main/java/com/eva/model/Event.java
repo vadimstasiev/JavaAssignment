@@ -9,10 +9,6 @@ import java.util.List;
 import java.util.Map;
 
 public class Event {
-    public static void updateUser() {
-        // update any given property
-
-    }
     public static void createEvent(
            String uuid,
            String location,

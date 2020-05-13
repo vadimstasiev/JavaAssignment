@@ -13,6 +13,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import com.eva.App;
 import com.eva.model.User;
+import com.jfoenix.controls.JFXButton;
 import com.mysql.cj.jdbc.exceptions.CommunicationsException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -29,6 +30,12 @@ public class Home extends DataController {
     @FXML
     public Label full_name;
     public Label id_number;
+    public Label userType;
+    public JFXButton adminAccess1;
+    public JFXButton adminAccess2;
+    public VBox sidePanelContainer;
+    public JFXButton organizerAccess1;
+    public JFXButton organizerAccess2;
 
     @FXML
     private VBox pnl_scroll;
@@ -39,6 +46,20 @@ public class Home extends DataController {
         full_name.setText(dataMap.get("first_name") + " " +  dataMap.get("last_name"));
         id_number.setText("User ID: " +  dataMap.get("id"));
         loadSimpleView("DefaultModular");
+        try {
+            if(setNotNull((String) dataMap.get("isAdmin")).equals("1")) {
+                userType.setText("Admin");
+            } else {
+                sidePanelContainer.getChildren().remove(adminAccess1);
+                sidePanelContainer.getChildren().remove(adminAccess2);
+                if(setNotNull((String) dataMap.get("isOrganizer")).equals("0")) {
+                    sidePanelContainer.getChildren().remove(organizerAccess1);
+                    sidePanelContainer.getChildren().remove(organizerAccess2);
+                }
+            }
+        } catch (Exception e) {
+
+        }
     }
 
     private void loadSimpleView(String view)
@@ -79,6 +100,12 @@ public class Home extends DataController {
 
     public void searchEvents() { loadDataView("SearchEvents"); }
 
+    public void BookedEvents() { loadDataView("BookedEvents"); }
+
+    public void ManageEvents() { loadDataView("ManageEvents"); }
+
+    public void AdminEvents() { loadDataView("AdminEvents"); }
+
     public void openUserManagement() {
         loadSimpleView("UserManagementModular");
     }
@@ -95,4 +122,6 @@ public class Home extends DataController {
         App.newSimpleWindow("Login", "Login");
         close();
     }
+
+    private String setNotNull(String str){ return str==null?"":str; }
 }

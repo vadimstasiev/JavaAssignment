@@ -44,25 +44,42 @@ public class BookEvent {
         try {
             String user_id = setNotNull((String) userData.get("id"));
             String uuid = setNotNull((String) eventData.get("uuid"));
-
+            int placeLimitation = Integer.parseInt(setNotNull((String) eventData.get("placeLimitation")));
+            int numberOfBookings = Booking.getNumberOfBookings(uuid);
             if(Booking.doesBookingExist(uuid, user_id)){
-                Booking.book(
-                        uuid,
-                        user_id
-                );
-                App.AlertBox("Success", "Successfully Booked", "SuccessAlertBox");
-            } else {
                 App.AlertBox("Error", "You have already booked this event!", "ErrorAlertBox");
+            } else {
+                System.out.println(numberOfBookings + " " + placeLimitation);
+                if(numberOfBookings>=placeLimitation){
+                    App.AlertBox("Error", "The event is already full!", "ErrorAlertBox");
+                } else {
+                    Booking.book(
+                            uuid,
+                            user_id
+                    );
+                    App.AlertBox("Success", "Successfully Booked", "SuccessAlertBox");
+                }
             }
         } catch (Exception e) {
             App.AlertBox("Error", "Booking Failed!", "ErrorAlertBox");
         }
         close();
     }
-    private String setNotNull(String str){ return str==null?"":str; }
+    public void deleteBooking() {
+        App.DialogReferenceAnswer referenceAnswer = new App.DialogReferenceAnswer();
+        App.DialogBox("Confirm", "Are you sure you want to delete this booking?", "DangerDialogBox", referenceAnswer);
+        if(referenceAnswer.answer.equals("Yes")) {
+            String uuid = setNotNull((String) eventData.get("uuid"));
+            String user_id = setNotNull((String) userData.get("id"));
+            Booking.deleteBooking(uuid, user_id);
+            close();
+        }
+    }
 
+    private String setNotNull(String str){ return str==null?"":str; }
     @FXML
     VBox window;
+
     public void close(){
         Stage stage = (Stage) window.getScene().getWindow();
         stage.close();

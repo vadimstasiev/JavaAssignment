@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 12, 2020 at 11:49 PM
+-- Generation Time: May 13, 2020 at 04:38 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.2.30
 
@@ -66,6 +66,13 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `first_name`, `last_name`, `gender`, `address_line`, `town`, `county`, `postcode`, `dob`, `isOrganizer`, `isAdmin`, `hashed_password`) VALUES
+(1, 'Administrator', '1', 'Male', 'Some place', 'Some Town', 'Bedfordshire', 'Some post code', '2010-05-27', 0, 1, '$2a$10$tqz90s84fOFlLUxf5Xrg8efs6.t94HrkJrkdOVeNP.E1XzSW3s4Ni');
+
+--
 -- Indexes for dumped tables
 --
 
@@ -98,19 +105,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `bookings`
 --
 ALTER TABLE `bookings`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `events`
 --
 ALTER TABLE `events`
-  MODIFY `user_fk` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `user_fk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50001;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(8) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1900878;
 
 --
 -- Constraints for dumped tables

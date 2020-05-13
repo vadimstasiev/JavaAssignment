@@ -18,9 +18,7 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 
-import java.io.IOException;
 import java.net.URL;
-import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.List;
 import java.util.Map;
 import java.util.ResourceBundle;
@@ -29,7 +27,7 @@ import static javafx.geometry.NodeOrientation.RIGHT_TO_LEFT;
 import static javafx.scene.paint.Color.WHITE;
 
 
-public class SearchEvents extends DataController implements Initializable
+public class ManageEvents extends DataController implements Initializable
 {   // the user "dataMap" from DataController is not available when the initialize starts, only after the view has loaded
     @FXML
     private TableView<TableRowData> table;
@@ -55,9 +53,11 @@ public class SearchEvents extends DataController implements Initializable
             String user_id = setNotNull((String) dataMap.get("id"));
             for(Map eventMap:eventMapList) {
                 try {
+                    String user_fk = setNotNull((String) eventMap.get("user_fk"));
                     String uuid = setNotNull((String) eventMap.get("uuid"));
                     Boolean isBooked = (Booking.doesBookingExist(uuid, user_id));
                     data.add(new TableRowData(
+                            user_fk,
                             setNotNull((String)eventMap.get("uuid")),
                             setNotNull((String)eventMap.get("title")),
                             setNotNull((String)eventMap.get("location")),
@@ -69,7 +69,7 @@ public class SearchEvents extends DataController implements Initializable
                     System.out.println("Error adding events to table.");
                 }
             }
-            FilteredList<TableRowData> filteredData = new FilteredList<>(data, p -> p.getName().contains(name) && p.getLocation().contains(location));
+            FilteredList<TableRowData> filteredData = new FilteredList<>(data, p -> p.getName().contains(name) && p.getLocation().contains(location) && user_id.equals(p.getUserID()));
             table.setItems(filteredData);
         } catch (CommunicationsException e) {
             App.AlertBox("Error", "Error connecting to the database.", "ErrorAlertBox");
@@ -78,6 +78,7 @@ public class SearchEvents extends DataController implements Initializable
 
 
     private class TableRowData {
+        private String userID;
         private String uuid;
         private String name;
         private String location;
@@ -85,14 +86,19 @@ public class SearchEvents extends DataController implements Initializable
         private String placeLimitation;
         private Boolean isBooked;
 
-        public TableRowData(String uuid, String name, String location, String date, String placeLimitation, Boolean isBooked)
+        public TableRowData(String userID, String uuid, String name, String location, String date, String placeLimitation, Boolean isBooked)
         {
+            this.userID = userID;
             this.uuid = uuid;
             this.name = name;
             this.location = location;
             this.date = date;
             this.placeLimitation = placeLimitation;
             this.isBooked = isBooked;
+        }
+
+        public String getUserID() {
+            return userID;
         }
 
         public String getUUID() {
@@ -211,25 +217,24 @@ public class SearchEvents extends DataController implements Initializable
                     btn.setRipplerFill(WHITE);
                     btn.setTextFill(WHITE);
                     btn.setMinWidth(150);
-                    if(!tableRowData.getIsBooked()){
-                        btn.setText("Book Event");
-                        btn.setStyle("-fx-background-color: #473E98;");
-                        btn.setOnAction(event -> {
+                    btn.setText("Manage Event");
+                    btn.setStyle("-fx-background-color: #473E98;");
+                    btn.setOnAction(event -> {
                         try{
                             int user_id_int = Integer.parseInt(setNotNull((String)dataMap.get("id")));
                             Map dataMap = User.getUserData(user_id_int);
                             try {
 
-                                FXMLLoader loader = App.loadFXML("BookEvent");
+                                FXMLLoader loader = App.loadFXML("UpdateEvent");
                                 Stage stage = new Stage();
-                                stage.setTitle("Book Event");
+                                stage.setTitle("Edit Event");
                                 //Display window and wait for it to be closed before returning
                                 stage.setScene(
                                         new Scene(
                                                 (Pane) loader.load()
                                         )
                                 );
-                                BookEvent controller = loader.<BookEvent>getController();
+                                EventRegister controller = loader.<EventRegister>getController();
                                 Map eventMap = null;
                                 for(Map eventMapTemp:eventMapList) {
                                     if(setNotNull((String)eventMapTemp.get("uuid"))==tableRowData.getUUID()) {
@@ -237,7 +242,9 @@ public class SearchEvents extends DataController implements Initializable
                                         break;
                                     }
                                 }
+                                assert eventMap != null;
                                 controller.initData(dataMap, eventMap);
+                                controller.setOpenNew(false);
                                 stage.showAndWait();
                                 triggerSearch();
                             } catch (Exception e) {
@@ -250,12 +257,7 @@ public class SearchEvents extends DataController implements Initializable
                         } catch(CommunicationsException e) {
                             App.AlertBox("Error", "Error connecting to the database.", "ErrorAlertBox");
                         }
-                        });
-                    } else {
-                        btn.setText("Booked");
-                        btn.setStyle("-fx-background-color: green;");
-                        btn.setOnAction(event -> {});
-                    }
+                    });
                     setGraphic(btn);
                 }
             }

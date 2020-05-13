@@ -44,6 +44,7 @@ public class EventRegister extends DataController {
         eventMap = eventData;
         locationOrPath.setText(setNotNull((String) eventMap.get("location")));
         title.setText(setNotNull((String)eventMap.get("title")));
+        time.setText(setNotNull((String)eventMap.get("time")));
         description.setText(setNotNull((String)eventMap.get("description")));
         placeLimitation.setText(setNotNull((String)eventMap.get("placeLimitation")));
         try {
@@ -92,15 +93,14 @@ public class EventRegister extends DataController {
                         description.getText(),
                         date.getValue().toString(),
                         time.getText(),
-                        placeLimitationInt,
-                        user_id_int
-                );
-                App.AlertBox("Success", "You have successfully created an event!", "SuccessAlertBox");
+                        user_id_int,
+                        placeLimitationInt
+                        );
                 if(openNew){
                     dataMap = User.getUserData(user_id_int);
                     App.newDataWindow("Home","Home", dataMap);
-                    close();
                 }
+                close();
             } catch (NumberFormatException e){
                 show_error("Please enter a number for the maximum people allowed.");
             } catch(CommunicationsException e) {
@@ -131,7 +131,8 @@ public class EventRegister extends DataController {
         App.DialogReferenceAnswer referenceAnswer = new App.DialogReferenceAnswer();
         App.DialogBox("Confirm", "Are you sure you want to delete this event?", "DangerDialogBox", referenceAnswer);
         if(referenceAnswer.answer.equals("Yes")){
-            Event.deleteEvent((String)eventMap.get("id"));
+            Event.deleteEvent((String)eventMap.get("uuid"));
+            close();
         }
     }
 }

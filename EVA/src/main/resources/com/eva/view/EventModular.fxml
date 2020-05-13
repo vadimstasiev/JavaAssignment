@@ -79,11 +79,6 @@
                             <padding>
                                 <Insets bottom="20.0" right="5.0" />
                             </padding>
-                            <JFXButton layoutX="1041.0" layoutY="95.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="30.0" ripplerFill="WHITE" style="-fx-background-color: red;" text="Delete Event" textFill="WHITE">
-                                <font>
-                                    <Font name="Bauhaus 93" size="24.0" />
-                                </font>
-                            </JFXButton>
                             <JFXButton layoutX="1041.0" layoutY="95.0" nodeOrientation="RIGHT_TO_LEFT" onAction="#createOrUpdateEvent" prefHeight="30.0" ripplerFill="WHITE" style="-fx-background-color: #473E98;" text="Create Event" textFill="WHITE">
                                 <font>
                                     <Font name="Bauhaus 93" size="24.0" />

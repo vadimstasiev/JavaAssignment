@@ -18,9 +18,7 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 
-import java.io.IOException;
 import java.net.URL;
-import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.List;
 import java.util.Map;
 import java.util.ResourceBundle;
@@ -29,12 +27,12 @@ import static javafx.geometry.NodeOrientation.RIGHT_TO_LEFT;
 import static javafx.scene.paint.Color.WHITE;
 
 
-public class SearchEvents extends DataController implements Initializable
+public class BookedEvents extends DataController implements Initializable
 {   // the user "dataMap" from DataController is not available when the initialize starts, only after the view has loaded
     @FXML
     private TableView<TableRowData> table;
     @FXML
-    private TableColumn<TableRowData, String> name_col, location_col, date_col, placeLimitation_col, button1_col;
+    private TableColumn<TableRowData, String> name_col, location_col, date_col, button1_col;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         fabricateRow();
@@ -69,7 +67,7 @@ public class SearchEvents extends DataController implements Initializable
                     System.out.println("Error adding events to table.");
                 }
             }
-            FilteredList<TableRowData> filteredData = new FilteredList<>(data, p -> p.getName().contains(name) && p.getLocation().contains(location));
+            FilteredList<TableRowData> filteredData = new FilteredList<>(data, p -> p.getName().contains(name) && p.getLocation().contains(location) && p.getIsBooked());
             table.setItems(filteredData);
         } catch (CommunicationsException e) {
             App.AlertBox("Error", "Error connecting to the database.", "ErrorAlertBox");
@@ -176,24 +174,6 @@ public class SearchEvents extends DataController implements Initializable
         };
         date_col.setCellFactory(cellFactory2);
 
-        Callback<TableColumn<TableRowData, String>, TableCell<TableRowData, String>> cellFactory3
-                = (final TableColumn<TableRowData, String> entry) -> new TableCell<>() {
-            Label textLabel = new Label();
-            @Override
-            public void updateItem(String item, boolean empty) {
-                super.updateItem(item, empty);
-                if (empty) {
-                    setGraphic(null);
-                } else {
-                    TableRowData tableRowData = table.getItems().get(getIndex());
-                    textLabel.setText(tableRowData.getPlaceLimitation());
-                    setGraphic(textLabel);
-                }
-                setText(null);
-            }
-        };
-        placeLimitation_col.setCellFactory(cellFactory3);
-
         Callback<TableColumn<TableRowData, String>, TableCell<TableRowData, String>> cellFactory4
                 = (TableColumn<TableRowData, String> param) -> new TableCell<>() {
             final JFXButton btn = new JFXButton();
@@ -210,17 +190,16 @@ public class SearchEvents extends DataController implements Initializable
                     btn.setPrefHeight(30);
                     btn.setRipplerFill(WHITE);
                     btn.setTextFill(WHITE);
-                    btn.setMinWidth(150);
-                    if(!tableRowData.getIsBooked()){
-                        btn.setText("Book Event");
-                        btn.setStyle("-fx-background-color: #473E98;");
-                        btn.setOnAction(event -> {
+                    btn.setMinWidth(230);
+                    btn.setText("See Event Details");
+                    btn.setStyle("-fx-background-color: #473E98;");
+                    btn.setOnAction(event -> {
                         try{
                             int user_id_int = Integer.parseInt(setNotNull((String)dataMap.get("id")));
                             Map dataMap = User.getUserData(user_id_int);
                             try {
 
-                                FXMLLoader loader = App.loadFXML("BookEvent");
+                                FXMLLoader loader = App.loadFXML("EventDetails");
                                 Stage stage = new Stage();
                                 stage.setTitle("Book Event");
                                 //Display window and wait for it to be closed before returning
@@ -250,13 +229,9 @@ public class SearchEvents extends DataController implements Initializable
                         } catch(CommunicationsException e) {
                             App.AlertBox("Error", "Error connecting to the database.", "ErrorAlertBox");
                         }
-                        });
-                    } else {
-                        btn.setText("Booked");
-                        btn.setStyle("-fx-background-color: green;");
-                        btn.setOnAction(event -> {});
-                    }
+                    });
                     setGraphic(btn);
+
                 }
             }
         };

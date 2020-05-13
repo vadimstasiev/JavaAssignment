@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="477.0" prefWidth="949.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eva.controller.BookedEvents">
+   <children>
+      <Pane layoutX="27.0" layoutY="14.0" prefHeight="46.0" prefWidth="896.0" style="-fx-background-color: #fff;">
+         <effect>
+            <DropShadow color="#d7d2d2" height="50.0" radius="24.5" width="50.0" />
+         </effect>
+         <children>
+            <HBox alignment="CENTER" layoutY="7.0" prefWidth="896.0" spacing="10.0">
+               <children>
+                  <TextField fx:id="searchByName" alignment="CENTER" layoutY="140.0" onKeyTyped="#triggerSearch" prefWidth="245.0" promptText="Search by Name">
+                     <font>
+                        <Font size="15.0" />
+                     </font></TextField>
+                  <TextField fx:id="searchByLocation" alignment="CENTER" layoutY="140.0" onKeyTyped="#triggerSearch" prefHeight="31.0" prefWidth="615.0" promptText="Search by Location">
+                     <font>
+                        <Font size="15.0" />
+                     </font></TextField>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+      <Pane layoutX="27.0" layoutY="74.0" prefHeight="389.0" prefWidth="896.0" style="-fx-background-color: #fff;">
+         <effect>
+            <DropShadow color="#d7d2d2" height="50.0" radius="24.5" width="50.0" />
+         </effect>
+         <children>
+            <VBox alignment="CENTER" layoutX="13.0" layoutY="12.0" prefHeight="365.0" prefWidth="870.0">
+               <children>
+                  <TableView fx:id="table" prefHeight="365.0" prefWidth="850.0">
+                     <columns>
+                        <TableColumn fx:id="name_col" maxWidth="3000.0" prefWidth="47.0" text="Name" />
+                        <TableColumn fx:id="location_col" prefWidth="301.0" text="Location" />
+                        <TableColumn fx:id="date_col" prefWidth="75.0" text="Event Date" />
+                        <TableColumn fx:id="button1_col" prefWidth="75.0" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

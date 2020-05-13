@@ -78,7 +78,7 @@
         <padding>
             <Insets bottom="20.0" right="5.0" />
         </padding>
-        <JFXButton layoutX="1041.0" layoutY="95.0" nodeOrientation="RIGHT_TO_LEFT" onAction="#bookEvent" prefHeight="30.0" ripplerFill="WHITE" style="-fx-background-color: #473E98;" text="Book Event" textFill="WHITE">
+        <JFXButton layoutX="1041.0" layoutY="95.0" nodeOrientation="RIGHT_TO_LEFT" onAction="#deleteBooking" prefHeight="30.0" ripplerFill="WHITE" style="-fx-background-color: red;" text="Delete Booking" textFill="WHITE">
             <font>
                 <Font name="Bauhaus 93" size="24.0" />
             </font>

@@ -12,10 +12,6 @@ import java.util.List;
 import java.util.Map;
 
 public class User {
-    public static void updateUser() {
-        // update any given property
-
-    }
     public static void createUser(
            Integer id,
            String first_name,
