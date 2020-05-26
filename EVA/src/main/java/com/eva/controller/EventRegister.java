@@ -75,6 +75,7 @@ public class EventRegister extends DataController {
                 try {
                     String idFromDataMap = dataMap.get("id").toString();
                     user_id_int = Integer.parseInt(eventMap.get("user_fk")==null ? idFromDataMap: eventMap.get("user_fk").toString());
+                    System.out.println("user_id_int " + user_id_int);
                 } catch (NumberFormatException e) {
                     show_error("Error parsing user id");
                 }
